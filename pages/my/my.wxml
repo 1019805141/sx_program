@@ -1,0 +1,48 @@
+<!--pages/my/my.wxml-->
+<view class="mytop">
+    <view class="mytop_tx" wx:if="{{user == null || user ==''}}">
+        <image src="../../assets/img/logo.jpg"></image>
+        <view bindtap="goLogin">去登陆</view>
+    </view>
+    <view wx:else class="mytop_tx" bindtap="goUserinfo">
+        <image src="{{user.avatar}}"></image>
+        <view>{{user.nickname}}</view>
+    </view>
+    <image class="mytop_bg" src="../../assets/img/my_bg.png"></image>
+</view>
+<view class="mybox">
+    <view class="container2">
+        <view class="mygroup">
+            <view class="mylist" bindtap="goCash">
+                <image src="../../assets/img/my_icon1.png"></image>
+                <view>我的优惠券</view>
+                <image src="../../assets/img/my_jt.png"></image>
+            </view>
+            <view class="mylist" bindtap="goAudi">
+                <image src="../../assets/img/my_icon2.png"></image>
+                <view>我的预约试听</view>
+                <image src="../../assets/img/my_jt.png"></image>
+            </view>
+            <view class="mylist" bindtap="goBuy">
+                <image src="../../assets/img/my_icon3.png"></image>
+                <view>已购课程</view>
+                <image src="../../assets/img/my_jt.png"></image>
+            </view>
+            <view class="mylist" bindtap="goComment">
+                <image src="../../assets/img/my_icon4.png"></image>
+                <view>我的评价</view>
+                <image src="../../assets/img/my_jt.png"></image>
+            </view>
+            <view class="mylist">
+                <image src="../../assets/img/my_icon5.png"></image>
+                <view>我已参加的微信活动（教育途）</view>
+                <image src="../../assets/img/my_jt.png"></image>
+            </view>
+            <view class="mylist" bindtap="goSele">
+                <image src="../../assets/img/my_icon6.png"></image>
+                <view>申请入住</view>
+                <image src="../../assets/img/my_jt.png"></image>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,103 @@
+/* pages/index/courseDetails/audition/audition.wxss */
+.top_text image {
+    width: 150rpx;
+    height: 150rpx;
+    float: left;
+    margin-right: 20rpx;
+}
+
+.top_text>view {
+    float: left;
+
+}
+
+.top_text>view>div {
+    color: #ffffff;
+    font-size: 38rpx;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20rpx;
+}
+
+.top_text>view>span {
+    color: #ffffff;
+    font-size: 28rpx;
+    margin-bottom: 8rpx;
+    display: block;
+}
+
+.top {
+    position: relative;
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.bg {
+    width: 690rpx;
+    height: 240rpx;
+    display: block;
+    margin: 0 auto;
+}
+
+.top_text {
+    position: absolute;
+    left: 6%;
+    top: 16%;
+    width: 100%;
+}
+
+.biao {
+    margin-bottom: 30rpx;
+}
+
+.biao>view {
+    font-size: 32rpx;
+    margin-bottom: 10rpx;
+}
+
+.biao>input {
+    width: 100%;
+    border-radius: 10rpx;
+    border: 1px solid #CCCCCC;
+    height: 65rpx;
+    line-height: 65rpx;
+}
+
+.button_container {
+    overflow: hidden;
+}
+
+.button_container button {
+    width: 31%;
+    margin: 1%!important;
+    float: left;
+    max-width: 31%;
+    min-width: 31%;
+}
+
+/* 按钮未选中 */
+.normal_button {
+    border: 1px solid #DBDBDB;
+    color: #222222;
+    font-weight: normal;
+    font-size: 28rpx;
+}
+
+/* 按钮选中 */
+.checked_button {
+    background: #0DA6FF;
+    color: white;
+    font-size: 28rpx;
+    font-weight: normal;
+}
+
+.btn {
+    width: 100%;
+    background: #0DA6FF;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-top: 50rpx;
+}

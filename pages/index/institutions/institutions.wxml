@@ -1,0 +1,39 @@
+<!--附近机构-->
+<view class="container2">
+    <view class="mar">
+        <view wx:for="{{orgList}}" wx:key="key">
+    <view class="index_jigou" >
+      <view class="index_jigou_top">
+        <image wx:if="{{item.logo == null || item.logo == ''}}" src="../../assets/img/zanwulist.png"></image>
+        <image wx:else src="{{ipUrl+item.logo}}"></image>
+        <view class="index_jigou_text" bindtap="goInstitutionDetail" data-id="{{item.id}}">
+          <p>{{item.name}}</p>
+          <view>{{item.description}}</view>
+          <view style="overflow: hidden; float:left" wx:for="{{item.categories}}"  wx:key="index" wx:for-item="newitem">
+            <div>{{newitem.name}}</div>
+          </view>
+          <span class="index_jigou_star index_jigou_star1" wx:if="{{item.appraise.length>0}}">
+            <image wx:if='{{item.appraise[0].xiaoshu}}' wx:for="{{item.appraise[0].aggregate}}" wx:for-index='index' wx:for-item="items" src="{{item.appraise[0].xiaoshuz==index?'../../../assets/img/s11.png':'../../../assets/img/s1.png'}}">
+            </image>
+            <image wx:if='{{!item.appraise[0].xiaoshu}}' wx:for-index='index' wx:for-item="items" wx:for="{{item.appraise[0].aggregate}}" src="../../../assets/img/s1.png"></image>
+            <image wx:for="{{(item.appraise[0].xiaoshu?4:5) - item.appraise[0].aggregate}}" src="../../../assets/img/s2.png"></image>
+            <p>{{item.appraise[0].appraise_count}}条真实评价</p>
+          </span>
+        </view>
+        <view class="index_jigou_right" bindtap="goTel" data-tel="{{item.tel}}" data-id="{{item.id}}">
+          <image src="../../../assets/img/index_tel.png"></image>
+          <view>{{item.call_count}}人</view>
+        </view>
+      </view>
+      <view class="index_jigou_bottom">
+        <image src="../../../assets/img/index_dw2.png"></image>
+        <p>{{item.address}}</p>
+        <p>距您<span>{{item.location}}</span>km</p>
+      </view>
+  </view>
+    </view>
+    
+</view>
+</view>
+
+<view class="bottom_footer" style="{{bottomStyle}}">已经到底啦~</view>

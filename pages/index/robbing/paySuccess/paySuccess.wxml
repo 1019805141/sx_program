@@ -1,0 +1,10 @@
+<!--pages/index/robbing/paySuccess/paySuccess.wxml-->
+<view class="container2">
+    <image class="img" src="../../../../assets/img/pay.png"></image>
+    <view class="te">支付成功！</view>
+    <view class="btn">
+        <view bindatp="goPay">继续购买</view>
+        <view bindtap="goDetail">查看详情</view>
+    </view>
+</view>
+

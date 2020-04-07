@@ -1,0 +1,333 @@
+/* pages/index/robbing/meal398/meal398.wxss */
+.tongzhi {
+    background: #DAECFF;
+    overflow: hidden;
+    padding: 14rpx 0;
+}
+
+.tongzhi image {
+    width: 24rpx;
+    height: 20rpx;
+    float: left;
+    margin-right: 10rpx;
+    margin-top: 10rpx;
+}
+
+.tongzhi>view {
+    color: #565656;
+    font-size: 26rpx;
+}
+
+page {
+    background: #f6f6f6;
+}
+
+.time {
+    background: #ffffff;
+    padding: 15rpx;
+    border-radius: 15rpx;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 20rpx;
+}
+
+.name_right {
+    font-size: 28rpx;
+    color: #F9524A;
+    margin-bottom: 10rpx;
+    margin-top: 10rpx;
+}
+
+.name_right text {
+    background: #0da6ff;
+    border-radius: 6rpx;
+    color: #fff;
+    padding: 2rpx 6rpx;
+    margin: 0 8rpx;
+
+}
+
+.name_right>p {
+    color: #333333;
+}
+
+.jiesuan {
+    background: #ffffff;
+    padding: 20rpx 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.jiesuan>view {
+    background: #4ca9ff;
+    text-align: center;
+    color: #ffffff;
+    font-size: 32rpx;
+    border-radius: 100rpx;
+    width: 90%;
+    margin: 0 auto;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.bg {
+    background: #ffffff;
+    padding: 15rpx;
+    border-radius: 15rpx;
+    overflow: hidden;
+    margin-top: 20rpx;
+    margin-bottom: 150rpx;
+}
+
+.list {
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    padding-bottom: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.list>image {
+    width: 160rpx;
+    height: 160rpx;
+    margin-left: 15rpx;
+    border-radius: 15rpx;
+    float: left;
+}
+
+.list checkbox {
+    padding-bottom: 30rpx;
+    float: left;
+    padding-top: 60rpx;
+}
+
+checkbox .wx-checkbox-input {
+    width: 34rpx;
+    height: 34rpx;
+    border-radius: 50%;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    background: #0394F0;
+    border-color: #0394F0;
+}
+
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+    width: 20rpx;
+    height: 20rpx;
+    line-height: 20rpx;
+    text-align: center;
+    font-size: 22rpx;
+    color: #fff;
+    background: transparent;
+    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.text {
+    float: left;
+    margin-left: 20rpx;
+    width: 62%;
+}
+
+.text>view {
+    font-size: 30rpx;
+    color: #333333;
+}
+
+.text>p {
+    color: #565656;
+    font-size: 26rpx;
+    display: block;
+    margin-top: 14rpx;
+    margin-bottom: 10rpx;
+}
+
+.text>div {
+    float: right;
+
+}
+
+.text>div>image {
+    width: 19rpx;
+    height: 29rpx;
+    float: left;
+    margin-right: 10rpx;
+}
+
+.text>div>p {
+    float: left;
+
+    color: #333333;
+}
+
+.text>div>p>span {
+    color: #ff3b0d;
+
+}
+
+.list:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+
+
+
+.motai {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.motai_box {
+    border-radius: 10rpx;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.motai_box>image {
+    width: 260rpx;
+    height: 260rpx;
+    margin: 0 auto;
+    margin-bottom: 30rpx;
+    padding-top: 50rpx;
+    position: relative;
+    margin-top: -180rpx;
+}
+
+.motai_box_title {
+    font-size: 32rpx;
+    color: #565656;
+    margin-bottom: 80rpx;
+    margin-top: 30rpx;
+
+}
+
+.motai_box p {
+    color: #565656;
+    margin-bottom: 10rpx;
+    font-size: 26rpx;
+    margin-bottom: 40rpx;
+    display: block;
+}
+
+.motai_btn {
+    background: #0DA6FF;
+    color: #ffffff;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 100rpx;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.motai_btn2 {
+    border: 1px solid #0DA6FF;
+    color: #0DA6FF;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 100rpx;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20rpx;
+}
+
+/* 模态 */
+
+.drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #000;
+    opacity: 0.4;
+    overflow: hidden;
+}
+
+/*content*/
+
+.drawer_box {
+    width: 510rpx;
+    /* overflow: hidden; */
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    z-index: 1001;
+    background: #fafafa;
+    margin: -150px 50rpx 0 50rpx;
+    border-radius: 10rpx;
+    padding-bottom: 30rpx;
+}
+
+.drawer_title {
+    padding: 15px;
+    font: 30rpx;
+    text-align: center;
+}
+
+.drawer_content {
+    padding-bottom: 20rpx;
+}
+
+.btn_ok {
+    padding: 8px;
+    font-size: 28rpx;
+    text-align: center;
+    /* border-top: 1px solid #e8e8ea; */
+    color: #ffffff;
+    background: #0da6ff;
+    width: 320rpx;
+    border-radius: 50rpx;
+    margin: 0 auto;
+}
+
+.bottom {
+    padding-bottom: 20px;
+}
+
+.bubble {
+    position: relative;
+    overflow: hidden;
+}
+
+.bubble:after {
+    content: "";
+    background: #999;
+    position: absolute;
+    width: 750rpx;
+    height: 750rpx;
+    left: calc(50% - 375rpx);
+    top: calc(50% - 375rpx);
+    opacity: 0;
+    margin: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.4s ease-in-out;
+}
+
+.bubble:active:after {
+    transform: scale(0);
+    opacity: 1;
+    transition: 0s;
+}
+
+.drawer_content textarea {
+    width: 430rpx;
+    background: #eeeeee;
+    margin: 0 auto;
+    height: 220rpx;
+    border-radius: 10rpx;
+    padding: 10rpx;
+    font-size: 28rpx;
+}

@@ -1,0 +1,28 @@
+<!--pages/my/myComment/myComment.wxml-->
+<view class="container2">
+    <view class="nav_tab">
+        <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected">
+            {{item}}
+            <view class="{{selected==index?'nav_underline':''}}"></view>
+        </view>
+    </view>
+    <view class="zanwu" style="{{comment.length>0?'display:none':'display:block'}}">
+        <image src="../../../assets/img/zanwuimg.png"></image>
+        <view>暂无我的评论信息</view>
+    </view>
+    <view class="box" wx:for="{{comment}}" wx:key="key" style="{{comment.length>0?'display:block':'display:none'}}" data-id="{{item.id}}" data-order_no="{{item.order_no}}" data-is_appraise="{{item.is_appraise}}" data-type="{{item.type}}"  bindtap="goDetail">
+        <view class="box_top">
+            <image src="{{ipUrl + item.institution.logo}}"></image>
+            <view class="box_top_text">
+            <view>{{item.institution.name}}</view>
+                <p wx:if="{{item.type == 1}}">{{item.course.name}}</p>
+                <view wx:else>  
+                    <p wx:for="{{item.course}}" wx:for-index='index' wx:for-item="items">{{items.name}}</p>
+                </view>
+            </view>
+        <view class="{{item.is_appraise == 0?'daifukuan':'yiwancheng'}}">{{item.is_appraise == 0?'未评价':'已评价'}}</view>
+            <view class="btn" wx:if="{{item.is_appraise == 0}}">立即评价</view>
+        </view>
+    </view>
+
+</view>

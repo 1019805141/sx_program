@@ -1,0 +1,52 @@
+<!--pages/index/robbing/meal398/meal398.wxml-->
+<view class="tongzhi">
+    <view class="container2">
+        <image src="../../../../assets/img/tongzhi.png"></image>
+        <view>398元套餐中最多可选择四种课程哦！</view>
+    </view>
+</view>
+<view class="container2">
+    <view class="time">
+        <view class='name_right'><p>距离结束</p><text>{{day}}</text><p>天</p> <text>{{hou}}</text><p>时</p><text>{{min}}</text><p>分</p><text>{{sec}}</text><p>秒</p></view>
+    </view>
+
+    <view class="bg">
+        <checkbox-group bindchange="checkboxChange">
+        <view class="list" wx:for="{{educourses}}" wx:key="key">
+                <checkbox class="weui-check" value="{{item.id}}" checked="{{item.checked}}" />
+                <image bindtap="goDetail" data-id="{{item.id}}" src="{{ipUrl + item.institution.logo}}"></image>
+                <view class="text" bindtap="goDetail" data-id="{{item.id}}">
+                    <view>{{item.name}}</view>
+                    <p>{{item.institution.name}}</p>
+                    <div>
+                        <image src="../../../../assets/img/index_dw2.png"></image>
+                        <p><span>{{item.institution.location}}</span>km</p>
+                    </div>
+                </view>
+            </view>
+        </checkbox-group>
+
+    </view>
+</view>
+<view class="jiesuan">
+    <view bindtap="goPay" data-statu="open">去结算</view>
+</view>
+
+
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+<view class="motai_box" style="{{xuanze1}}">
+    <image src="../../../../assets/img/tishi_1.png"></image>
+    <view class="motai_box_title">您还可以选择{{nums}}种课程！</view>
+    <view class="motai_btn" bindtap="select">继续选择</view>
+  </view>
+
+  <view class="motai_box" style="{{xuanze2}}">
+    <image src="../../../../assets/img/tishi_2.png"></image>
+    <view class="motai_box_title">抱歉，您最多只能选择四种课程</view>
+    <view class="motai_btn" bindtap="select">继续选择</view>
+    <!-- <view class="motai_btn2" bindtap="select">去结算</view> -->
+  </view>
+</view>

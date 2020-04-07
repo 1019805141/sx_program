@@ -1,0 +1,48 @@
+<!--pages/my/myCommentDe398/myCommentDe398.wxml-->
+<!--pages/my/myCommentDe/myCommentDe.wxml-->
+<view class="container2">
+    <view class="kecheng">
+        <i></i>
+        <view>398元限量课程</view>
+        <i></i>
+    </view>
+</view>
+<view wx:for="{{list}}" wx:key="key" style="margin-bottom: 30rpx;">
+    <view class="container2">
+        <view class="box">
+            <view class="box_top">
+                <image src="{{ipUrl + item.institution.logo}}"></image>
+                <view class="box_top_text">
+                    <view>{{item.edu_course.name}}</view>
+                    <p>{{item.edu_course.description}}</p>
+                </view>
+            </view>
+        </view>
+        <view class="pingfen">
+            <view class="pingfen_title">整体评价</view>
+            <view class="star">
+                <image wx:if='{{item.xiaoshu}}' wx:for="{{item.grade}}" wx:for-index='index' wx:for-item="items" src="{{item.xiaoshuz==index?'../../../assets/img/s11.png':'../../../assets/img/s1.png'}}">
+                </image>
+                <image wx:if='{{!item.xiaoshu}}' wx:for-index='index' wx:for-item="items" wx:for="{{item.grade}}" src="../../../assets/img/s1.png"></image>
+                <image wx:for="{{(item.xiaoshu?4:5) - item.grade}}" src="../../../assets/img/s2.png"></image>
+            </view>
+            <view class="pingfen_fen">{{item.grade}}分</view>
+        </view>
+    </view>
+    <view class="pingjia">
+        <view class="container2">
+            <view wx:for="{{item.content}}" wx:for-index='index' wx:for-item="items">
+                <p>{{items.key}}</p>{{items.value}}
+            </view>
+        </view>
+    </view>
+    <view class="container2">
+        <view class="img_group" wx:if="{{item.images.length>0}}">
+            <image wx:for="{{item.images}}" wx:for-index='index' wx:for-item="items" src="{{'https://tongxueyueke.com/uploads' + items}}"></image>
+        </view>
+    </view>
+    <view class="container2">
+        <view class="time">评价时间：{{item.created_at}}</view>
+    </view>
+</view>
+

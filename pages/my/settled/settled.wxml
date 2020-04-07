@@ -1,0 +1,38 @@
+<!--pages/my/settled/settled.wxml-->
+<view class="container2">
+    <view class="biao mar">
+        <view>机构名称</view>
+        <input type="text" value="{{name}}" bindinput="forName" />
+    </view>
+    <view class="biao">
+        <view>机构地址</view>
+        <input type="text" value="{{adress}}" bindinput="forAdress" />
+    </view>
+    <view class="biao">
+        <view>详细地址</view>
+        <input type="text" value="{{adressAll}}" bindinput="forAderssAll" />
+    </view>
+    <view class="biao">
+        <view>机构电话</view>
+        <input type="number" value="{{tel}}" bindinput="forTel"/>
+    </view>
+    <view class="biao">
+        <view>机构业务</view>
+        <view class='button_container'>
+            <block wx:for="{{buttons}}" wx:key="buttons">
+                <button class='{{item.checked?"checked_button":"normal_button"}}' data-id='{{item.id}}' data-name="{{item.name}}" bindtap='radioButtonTap'>{{item.name}}</button>
+            </block>
+        </view>
+    <textarea placeholder="在此输入其他机构业务" bindinput="forText" style="{{textStyle}}"></textarea>
+    </view>
+    <view class="btn" bindtap="submitForm" data-is_join="{{is_join}}">{{is_join == 0?'申请入驻':'已申请入驻，我们会尽快与您联系'}}</view>
+
+
+    <view class="pay_left">
+        <checkbox-group bindchange="checkboxChange" style="display:inline-block">
+            <checkbox class="weui-check" value="是否选中"/>
+        </checkbox-group>
+        <p>我已阅读并同意<span>《入驻协议》</span></p>
+    </view>
+</view>
+

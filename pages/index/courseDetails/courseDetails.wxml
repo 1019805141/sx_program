@@ -1,0 +1,172 @@
+<!--课程详情-->
+<image class="banner" wx:if="{{detail.image == null || detail.image == ''}}" src="../../../assets/img/zanwuimg.png">
+</image>
+<swiper wx:else  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{detail.image}}"  wx:key="key">
+        <swiper-item>
+                <image class="banner" src="{{ipUrl + item}}"></image>
+        </swiper-item>
+    </block>
+</swiper>
+
+<view class="container2">
+    <view class="title">
+        <view class="title_s">
+            <view>{{detail.name}}</view>
+            <view>参考价：{{detail.price}}元</view>
+        </view>
+        <p>{{detail.desc}}</p>
+    </view>
+</view>
+<view class="jiange"></view>
+<view class="container2">
+    <view class="p2">
+        <p>适用对象<span wx:for="{{detail.ages}}">{{item.name+' '}}</span></p>
+        <p>班型<span>{{detail.price}}</span></p>
+        <p>班制<span>{{detail.system}}</span></p>
+        <p>课时数<span>{{detail.duration}}</span></p>
+        <p>日期<span>{{detail.time}}</span></p>
+    </view>
+</view>
+<view class="jiange"></view>
+<view class="container2">
+    <view class="jg">
+        <view class="jg_top">
+            <image data-id="{{detail.institution_id}}" bindtap="goinDetail" src="{{ipUrl + detail.institution.logo}}">
+            </image>
+            <view class="jg_right">
+                <view class="jg_right_title" data-id="{{detail.institution_id}}" bindtap="goinDetail">
+                    {{detail.institution.name}}</view>
+                <view class="jg_right_zx">
+                    <p>距离您<span>{{detail.institution.location}}</span>km</p>
+                    <view data-tel="{{detail.institution.tel}}" data-id="{{detail.id}}" bindtap="goTel">立即咨询</view>
+                </view>
+            </view>
+        </view>
+
+        <view class="jg_dz">
+            <p>校区地址：<span>{{detail.institution.address}}</span></p>
+            <!-- <image src="../../../assets/img/dw.png"></image> -->
+        </view>
+    </view>
+</view>
+<view class="jiange"></view>
+<view class="container2">
+    <view class="pltitle">
+        <view class="pltitle1">课程评价</view>
+        <view class="pltitle2" data-id="{{detail.id}}" bindtap="plMore">
+            共<span>{{detail.appraises.length==0?'0':detail.appraises.length}}</span>条评论></view>
+    </view>
+
+    <view class="zanwu" style="{{appraisesList.length>0?'display:none':'display:block'}}">
+        <image src="../../../assets/img/zanwuimg.png"></image>
+        <p>暂无课程评价</p>
+    </view>
+
+    <view class="pllist" style="{{appraisesList.length>0?'display:block':'display:none'}}">
+        <view class="section section_gap">
+            <scroll-view class="scroll-view_H" scroll-x="true">
+                <view class="scroll-view-item_H" wx:for="{{appraisesList}}">
+                    <view class="scroll_top">
+                        <image src="{{item.user.avatar}}"></image>
+                        <view class="scroll_top_right">
+                            <view class="scroll_top_right_l">
+                                <view>{{item.user.nickname}}</view>
+                                <div>
+                                    <image wx:if='{{item.xiaoshu}}' wx:for="{{item.grade}}" wx:for-index='index'
+                                        wx:for-item="items"
+                                        src="{{item.xiaoshuz==index?'../../../assets/img/s11.png':'../../../assets/img/s1.png'}}">
+                                    </image>
+                                    <image wx:if='{{!item.xiaoshu}}' wx:for-index='index' wx:for-item="items"
+                                        wx:for="{{item.grade}}" src="../../../assets/img/s1.png"></image>
+                                    <image wx:for="{{(item.xiaoshu?4:5) - item.grade}}"
+                                        src="../../../assets/img/s2.png">
+                                    </image>
+                                </div>
+                            </view>
+                            <view class="scroll_top_right_r">
+                                <p><span>{{item.grade}}</span>分</p>
+                            </view>
+                        </view>
+                    </view>
+                    <view wx:for="{{item.content}}" wx:for-item="items" class="scroll_ms">
+                        {{items.key}}<span>{{items.value}}</span>
+                    </view>
+                </view>
+
+            </scroll-view>
+        </view>
+    </view>
+    <view class="pltitle">
+        <view class="pltitle1">课程详情</view>
+    </view>
+    <view class="detail">
+        <rich-text nodes="{{detail.content}}"></rich-text>
+    </view>
+</view>
+<!-- <view class="jiange"></view>
+<view class="container2">
+    <view class="pltitle">
+        <view class="pltitle1">猜你喜欢</view>
+    </view>
+    
+    <view class="kclist">
+        <image src="../../../assets/img/index_qiangke.png"></image>
+        <view class="kclist_text">
+            <view>游泳基础提升班</view>
+            <p>XXX教育培训机构</p>
+        </view>
+        <view class="kclist_right">
+            <view class="kclist_right_btn">预约试听</view>
+            <view class="kclist_right_dw">
+                <image src="../../../assets/img/index_dw2.png"></image>
+                <p><span>23</span>km</p>
+            </view>
+        </view>
+    </view>
+    <view class="kclist">
+        <image src="../../../assets/img/index_qiangke.png"></image>
+        <view class="kclist_text">
+            <view>游泳基础提升班</view>
+            <p>XXX教育培训机构</p>
+        </view>
+        <view class="kclist_right">
+            <view class="kclist_right_btn">预约试听</view>
+            <view class="kclist_right_dw">
+                <image src="../../../assets/img/index_dw2.png"></image>
+                <p><span>23</span>km</p>
+            </view>
+        </view>
+    </view>
+    <view class="kclist">
+        <image src="../../../assets/img/index_qiangke.png"></image>
+        <view class="kclist_text">
+            <view>游泳基础提升班</view>
+            <p>XXX教育培训机构</p>
+        </view>
+        <view class="kclist_right">
+            <view class="kclist_right_btn">预约试听</view>
+            <view class="kclist_right_dw">
+                <image src="../../../assets/img/index_dw2.png"></image>
+                <p><span>23</span>km</p>
+            </view>
+        </view>
+    </view>
+    <view class="kclist">
+        <image src="../../../assets/img/index_qiangke.png"></image>
+        <view class="kclist_text">
+            <view>游泳基础提升班</view>
+            <p>XXX教育培训机构</p>
+        </view>
+        <view class="kclist_right">
+            <view class="kclist_right_btn">预约试听</view>
+            <view class="kclist_right_dw">
+                <image src="../../../assets/img/index_dw2.png"></image>
+                <p><span>23</span>km</p>
+            </view>
+        </view>
+    </view>
+</view> -->
+<view class="container2">
+    <view class="btn" bindtap="goBm" data-id="{{detail.id}}" data-institution_id="{{detail.institution_id}}">预约试听</view>
+</view>

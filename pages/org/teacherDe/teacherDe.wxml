@@ -1,0 +1,31 @@
+<!--pages/org/teacherDe/teacherDe.wxml-->
+<view class="container2">
+    <view class="tx_top">
+        <view class="tx_top_text">
+            <image src="{{ipUrl + detail.image}}"></image>
+            <view>
+                <p>{{detail.name}}老师</p>
+                <view>主授课程：{{detail.course}}</view>
+            </view>
+        </view>
+        <image src="../../../assets/img/teacher_bg.png"></image>
+    </view>
+    <view class="form">
+        <p>所在机构</p>
+        <span>{{detail.institution.name}}</span>
+    </view>
+    <view class="teacher">
+        <p>教师介绍</p>
+        <view class="teacher_box">
+            <view class="teacher_left">
+                <view>{{detail.name}}</view>
+                <p>
+                    <rich-text nodes="{{detail.summary}}"></rich-text>
+                </p>
+            </view>
+            <view class="teacher_right">
+                <image src="{{ipUrl + detail.image}}"></image>
+            </view>
+        </view>
+    </view>
+</view>

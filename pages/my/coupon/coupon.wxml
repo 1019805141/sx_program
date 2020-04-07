@@ -1,0 +1,68 @@
+<!--优惠券-->
+<view class="container2">
+    <view class="nav_title">
+        <view class="nav_tab">
+            <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}'
+                bindtap="selected">{{item}}
+                <view class="{{selected==index?'nav_underline':''}}"></view>
+            </view>
+        </view>
+        <!-- tab框显示内容 -->
+        <view wx:if="{{selected == 0}}">
+            <view class="zanwu" style="{{cashList.length>0?'display:none':'display:block'}}">
+                <image src="../../../assets/img/zanwu3.png"></image>
+                <view>暂未领取优惠券</view>
+            </view>
+            <view class="list" style="{{cashList.length>0?'display:block':'display:none'}}" wx:for="{{cashList}}" wx:key='key' bindtap="goCoupon" data-id="{{item.user_discount[0].id}}"> 
+                <view class="list_top">
+                    <image src="{{ipUrl + item.user_discount[0].institution.logo}}"></image>
+                    <view class="list_top_left">
+                        <view>{{item.user_discount[0].main_title}}</view>
+                        <span>{{item.user_discount[0].title}}</span>
+                    </view>
+                    <image src="../../../assets/img/youhuijuan.png"></image>
+                </view>
+                <view class="list_bottom">
+                    <view class="list_bottom_left">
+                        <view>详细信息</view>
+                        <image src="../../../assets/img/xia.png"></image>
+                    </view>
+                    <view class="list_bottom_right">
+                        <p>截止于<span>{{item.user_discount[0].end_time}}</span></p>
+                    </view>
+                    <view class="list_bottom_text">
+                        <view wx:for="{{item.user_discount[0].field}}"  wx:for-index='index' wx:for-item="items">{{items.key}}{{items.value}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{selected == 1}}">
+            <view class="zanwu" style="{{cashList.length>0?'display:none':'display:block'}}">
+                <image src="../../../assets/img/zanwu3.png"></image>
+                <view>暂未领取优惠券</view>
+            </view>
+            <view class="list" style="{{cashList.length>0?'display:block':'display:none'}}" wx:for="{{cashList}}" wx:key='key' bindtap="goCash" data-id="{{item.user_voucher[0].id}}">
+                <view class="list_top">
+                    <image src="{{ipUrl + item.user_voucher[0].institution.logo}}"></image>
+                    <view class="list_top_left">
+                        <view>{{item.user_voucher[0].main_title}}</view>
+                        <span>{{item.user_voucher[0].title}}</span>
+                    </view>
+                    <image src="../../../assets/img/youhuijuan.png"></image>
+                </view>
+                <view class="list_bottom">
+                    <view class="list_bottom_left">
+                        <view>详细信息</view>
+                        <image src="../../../assets/img/xia.png"></image>
+                    </view>
+                    <view class="list_bottom_right">
+                        <p>截止于<span>{{item.user_voucher[0].end_time}}</span></p>
+                    </view>
+                    <view class="list_bottom_text">
+                        <view>{{item.user_voucher[0].field}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

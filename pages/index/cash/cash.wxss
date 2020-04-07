@@ -1,0 +1,265 @@
+/* pages/index/cash/cash.wxss */
+/* pages/index/coupon/coupon.wxss */
+page{
+    background: #943feb;
+}
+.banner{
+    width: 750rpx;
+    height: 400rpx;
+    display: block;
+}
+.fenlei{
+    background: #AA58FF;
+    overflow: hidden;
+    padding: 15rpx 0;
+}
+.fenlei_list{
+    float: left;
+    width: 50%;
+}
+.fenlei_list>view{
+    color: #ffffff;
+    float: left;
+    margin-right: 20rpx;
+    margin-left: 32rpx;
+}
+.fenlei_list>picker{
+    background: #795CF6;
+    float: left;
+    width: 60%;
+    height: 40rpx;
+    border-radius: 20rpx;
+    line-height: 40rpx;
+    overflow: hidden;
+}
+.fenlei_list>picker .picker{
+    padding-left: 20rpx;
+    color:#ffffff;
+    font-size: 26rpx;
+    width: 70%;
+    float: left;
+}
+
+.fenlei_list image{
+    width: 22rpx;
+    height: 12rpx;
+    float: right;
+    margin-right: 20rpx;
+    margin-top: 18rpx;
+}
+.iconlist{
+    margin: 30rpx 0;
+    overflow: hidden;
+}
+.iconlist image{
+    width: 335rpx;
+    height: 120rpx;
+}
+
+.iconlist image:first-child{
+    float: left;
+}
+.iconlist image:last-child{
+    float: right;
+}
+.yhlist{
+    background: #ffffff;
+    border-radius: 10rpx;
+    padding: 30rpx;
+    width: 275rpx;
+    height: 440rpx;
+    position: relative;
+    float: left;
+    margin: 0 8rpx;
+    margin-bottom: 20rpx;
+}
+.text{
+    font-size: 28rpx;
+    overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.logo{
+    width: 276rpx;
+    height: 176rpx;
+    border: 1px solid #eeeeee;
+}
+.yhlist>p{
+    display: block;
+    margin-top: 20rpx;
+}
+.yhlist>p>span{
+    color: #FF4A1A;
+    font-size: 26rpx;
+}
+.yhlist>p>span:first-child{
+    float: left;
+}
+.yhlist>p>span:last-child{
+    float: right;
+}
+.yhlist>div>i:first-child{
+    background: #943feb;
+    border-radius: 50%;
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    left: -15rpx;
+    top: 70%;
+}
+.yhlist>div>i:last-child{
+    background: #943feb;
+    border-radius: 50%;
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    right: -15rpx;
+    top: 70%;
+}
+.btn{
+    display: block;
+    background: #A34DFC;
+    color: #ffffff;
+    border-radius: 30rpx;
+    height:60rpx;
+    line-height:60rpx;
+    margin-top: 100rpx;
+    text-align: center;
+}
+.yhlist>p{
+    font-size: 26rpx;
+}
+.motai{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+.motai_box{
+    border-radius: 10rpx;
+    margin: 0 auto;
+    text-align: center;
+}
+.motai_box>image{
+    width: 160rpx;
+    height: 160rpx;
+    margin: 0 auto;
+    margin-bottom: 30rpx;
+    padding-top: 50rpx;
+}
+.motai_box_title{
+    font-size: 32rpx;
+    color: #565656;
+    margin-bottom: 10rpx;
+}
+.motai_box p{
+    color: #565656;margin-bottom: 10rpx;
+    font-size: 26rpx;
+    margin-bottom: 40rpx;
+    display: block;
+}
+.motai_btn{
+    background: #0DA6FF;
+    color: #ffffff;
+    text-align: center;
+    height: 60rpx;
+    line-height: 60rpx;
+    border-radius: 30rpx;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* 模态 */
+
+.drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #000;
+    opacity: 0.4;
+    overflow: hidden;
+   }
+   
+   /*content*/
+   
+   .drawer_box {
+    width: 510rpx;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    z-index: 1001;
+    background: #fafafa;
+    margin: -150px 50rpx 0 50rpx;
+    border-radius: 10rpx;
+    padding-bottom: 30rpx;
+   }
+   
+   .drawer_title {
+    padding: 15px;
+    font: 30rpx;
+    text-align: center;
+   }
+   
+   .drawer_content {
+       padding-bottom: 20rpx;
+   }
+   
+   .btn_ok {
+    padding: 8px;
+    font-size: 28rpx;
+    text-align: center;
+    /* border-top: 1px solid #e8e8ea; */
+    color: #ffffff;
+    background: #0da6ff;
+    width: 320rpx;
+    border-radius: 50rpx;
+    margin: 0 auto;
+   }
+   
+   .bottom {
+    padding-bottom: 20px;
+   }
+   
+   .bubble {
+    position: relative;
+    overflow: hidden;
+   }
+   
+   .bubble:after {
+    content: "";
+    background: #999;
+    position: absolute;
+    width: 750rpx;
+    height: 750rpx;
+    left: calc(50% - 375rpx);
+    top: calc(50% - 375rpx);
+    opacity: 0;
+    margin: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.4s ease-in-out;
+   }
+   
+   .bubble:active:after {
+    transform: scale(0);
+    opacity: 1;
+    transition: 0s;
+   }
+   .drawer_content textarea{
+       width: 430rpx;
+       background: #eeeeee;
+       margin: 0 auto;
+       height: 220rpx;
+       border-radius: 10rpx;
+       padding: 10rpx;
+       font-size: 28rpx;
+   }

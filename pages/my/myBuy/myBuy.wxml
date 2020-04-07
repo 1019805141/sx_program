@@ -1,0 +1,54 @@
+<!--pages/my/myBuy/myBuy.wxml-->
+<view class="container2">
+    <view class="nav_tab">
+        <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected" wx:key="key">
+            {{item}}
+            <view class="{{selected==index?'nav_underline':''}}"></view>
+        </view>
+    </view>
+    <!-- <view class="box">
+        <view class="box_top">
+            <image src="../../../assets/img/index_qiangke.png"></image>
+            <view class="box_top_text">
+                <view>文化艺术培训课程</view>
+                <p>显示购买课程名称</p>
+                <p>XXX教育培训机构</p>
+            </view>
+            <view class="daitiyan">待体验</view>
+        </view>
+    </view> -->
+    
+    <!-- <view class="box">
+        <view class="box_top">
+            <image src="../../../assets/img/index_qiangke.png"></image>
+            <view class="box_top_text">
+                <view>文化艺术培训课程</view>
+                <p>显示购买课程名称</p>
+                <p>XXX教育培训机构</p>
+                <p>XXX教育培训机构</p>
+                <p>XXX教育培训机构</p>
+            </view>
+            <view class="yiwancheng">已完成</view>
+        </view>
+    </view> -->
+    <view class="zanwu" style="{{buyList.length>0?'display:none':'display:block'}}">
+        <image src="../../../assets/img/zanwuimg.png"></image>
+        <view>暂无已购课程信息</view>
+    </view>
+    <view class="box" style="{{buyList.length>0?'display:block':'display:none'}}" wx:for="{{buyList}}" wx:key="key" bindtap="goDetail" data-id="{{item.id}}">
+        <view class="box_top">
+            <image src="{{ipUrl + item.institution.logo}}"></image>
+            <view class="box_top_text">
+                <view>{{item.institution.name}}</view>
+                <view wx:if="{{item.type == 1}}">
+                    <p>{{item.course.name}}</p>
+                </view>
+                <view wx:else>
+                    <p wx:for="{{item.course}}"  wx:for-index='index' wx:for-item="items">{{items.name}}</p>
+                </view>
+            </view>
+            <view class="{{item.status == 0?'daitiyan':item.status == 1?'yiwancheng':'daifukuan'}}">{{item.status == 0?'待体验':item.status == 1?'已完成':'待付款'}}</view>
+            <view class="btn" wx:if="{{item.status == 3}}">继续付款</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,131 @@
+/* pages/my/myBuy/myBuy.wxss */
+.nav_tab {
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30rpx;
+}
+
+.show {
+    line-height: 80rpx;
+    text-align: center;
+    flex: 1;
+    color: #333333;
+    font-size: 30rpx;
+}
+
+.hidden {
+    line-height: 80rpx;
+    text-align: center;
+    color: #0da6ff;
+    flex: 1;
+    font-size: 30rpx;
+    border-bottom: 2px solid #0da6ff;
+}
+
+.box{
+    border: 1px solid #E6E6E6;
+    margin-bottom: 30rpx;
+    position: relative;
+}
+.box_top{
+    padding: 20rpx;
+    overflow: hidden;
+}
+.box_top>image{
+    width: 130rpx;
+    height: 130rpx;
+    display: block;
+    float: left;
+    margin-right: 20rpx;
+}
+.box_top_text{
+    float: left;
+    width: 56%;
+}
+.box_top_text>view{
+    font-size: 30rpx;
+    color: #262626;
+    margin-top: 10rpx;
+}
+.box_top_text p{
+    color: #808080;
+    font-size: 28rpx;
+    margin-top: 10rpx;
+    display: block;
+}
+.daitiyan{
+    float: right;
+    font-size: 28rpx;
+    color: #0DA6FF;
+    border-radius: 6rpx;
+    margin-top: 40rpx;
+}
+.yiwancheng{
+    float: right;
+    font-size: 28rpx;
+    color: #893BFF;
+    border-radius: 6rpx;
+    margin-top: 40rpx;
+}
+.daifukuan{
+    float: right;
+    font-size: 28rpx;
+    color: #FF3B0D;
+    border-radius: 6rpx;
+    margin-top: 10rpx;
+}
+.datiyan{
+    float: right;
+    font-size: 28rpx;
+    color: #0DA6FF;
+    border-radius: 6rpx;
+    margin-top: 10rpx;
+}
+.box_bottom{
+    padding: 10rpx 0;
+    border-top: 1px solid #E6E6E6;
+    padding-left: 30rpx;
+}
+.box_bottom>image{
+    width: 20rpx;
+    height: 30rpx;
+    float: left;
+    display: block;
+    margin-right: 15rpx;
+    margin-top: 6rpx;
+}
+.box_bottom>view{
+    color: #808080;
+    font-size: 28rpx;
+}
+.btn{
+    clear: both;
+    font-size: 26rpx;
+    background: #0DA6FF;
+    color: #ffffff;
+    text-align: center;
+    padding: 6rpx 12rpx;
+    position: absolute;
+    right: 20rpx;
+    top: 58%;
+    border-radius: 10rpx;
+}
+.zanwu{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 300rpx;
+}
+.zanwu image{
+    width: 362rpx;
+    height: 258rpx;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 70rpx;
+}
+.zanwu view{
+    font-size: 28rpx;
+    color: #4D4D4D;
+}

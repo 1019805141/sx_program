@@ -1,0 +1,32 @@
+<!--pages/my/myAuditDetail/myAuditDetail.wxml-->
+<view class="container2">
+    <view class="box">
+        <view class="box_top">
+            <image src="{{ipUrl+content.institution.logo}}"></image>
+            <view class="box_top_text">
+                <view>{{content.course.name}}</view>
+                <p>{{content.institution.name}}</p>
+            </view>
+            <view class="daishiting">{{content.status == 0?'待试听':'已完成'}}</view>
+        </view>
+    </view>
+    <view class="miaoshu mar">
+        <view class="title">机构信息</view>
+        <view class="text">机构名称<p>{{content.institution.name}}</p></view>
+        <view class="text">机构热线<p class="tel">{{content.institution.tel}}</p></view>
+        <view class="text">机构地址<p>{{content.institution.address}}</p></view>
+    </view>
+    <view class="miaoshu">
+        <view class="title">预约信息</view>
+        <view class="text">申请人<p>{{content.name}}</p></view>
+        <view class="text">联系电话<p class="tel">{{content.tel}}</p></view>
+        <view class="text">孩子年龄<p>{{content.age}}</p></view>
+        <view class="text">申请时间<p>{{content.created_at}}</p></view>
+    </view>
+    <view class="btn_group" wx:if="{{content.status == 1}}">
+        <view class="btn">去评价</view>
+        <view class="btn">查看评价</view>
+    </view>
+   
+</view>
+ 

@@ -1,0 +1,71 @@
+<!--优惠券-->
+<image class="banner" src='{{bannerImg}}' lazy-load='true'></image>
+<!-- <image class="banner" src='../../../assets/img/yh_banner.png' lazy-load='true' style="display: none;"></image> -->
+<view class="fenlei">
+    <view class="container2">
+        <view class="fenlei_list">
+            <view>地区</view>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
+              <view class="picker">
+                {{defalu}}
+              </view>
+              <image src="../../../assets/img/index_jiantou.png"></image>
+            </picker>
+        </view>
+        <view class="fenlei_list">
+          <view>行业</view>
+          <picker bindchange="bindPickerChange2" value="{{index}}" range="{{iconList}}" range-key="name">
+            <view class="picker">
+              {{hangye}}
+            </view>
+            <image src="../../../assets/img/index_jiantou.png"></image>
+          </picker>
+      </view>
+    </view>
+</view>
+<view class="bg">
+  <view class="container2">
+    <view class="iconlist">
+      <image src="../../../assets/img/youhuijuan_icon1.png"></image>
+      <image bindtap="goCash" src="../../../assets/img/youhuijuan_icon2.png"></image>
+    </view>
+    <view class="yhlist" wx:for="{{couponList}}">
+      <image class="logo" bindtap="goDetail" data-id="{{item.id}}" src="{{ipUrl + item.institution.logo}}"></image>
+      <view class="text" bindtap="goDetail" data-id="{{item.id}}">{{item.main_title}}</view>
+      <p bindtap="goDetail" data-id="{{item.id}}">{{item.title}}</p>
+      <!-- <p>
+        <span>优惠券</span>
+        <span>￥30</span>
+      </p> -->
+      <div>
+        <i></i>
+        <i></i>
+      </div>
+      <view class="btn" bindtap="powerDrawer" data-status="{{item.status}}" data-id="{{item.id}}" data-statu="open">{{item.status==0?'立即领取':'已领取'}}</view>
+    </view>
+
+  </view>
+</view>
+
+<!-- <view class="motai">
+  <view class="motai_box">
+    <image src="../../../assets/img/success_icon.png"></image>
+    <view class="motai_box_title">领取成功</view>
+    <p>请到【我的】-【我的优惠券】中查看</p>
+    <view class="motai_btn">继续选择</view>
+  </view>
+</view> -->
+
+
+
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+  <view class="motai_box">
+    <image src="../../../assets/img/success_icon.png"></image>
+    <view class="motai_box_title">领取成功</view>
+    <p>请到【我的】-【我的优惠券】中查看</p>
+    <view class="motai_btn" bindtap="select">继续选择</view>
+  </view>
+</view>

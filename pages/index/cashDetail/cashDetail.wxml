@@ -1,0 +1,35 @@
+<!--代金券-->
+<view class="bg">
+    <image class="bgimg" src="../../../assets/img/bg.png"></image>
+</view>
+<view class="container2">
+    <view class="box_top">
+        <image src="{{ipUrl+content.institution.logo}}"></image>
+        <view class="box_top_text">
+            <p>{{content.main_title}}</p>
+            <span>{{content.title}}</span>
+        </view>
+    </view>
+    <view class="text">
+       {{content.field}}
+    </view>
+    <view class="miaoshu">
+        <p>有效期：{{content.start_time}}至{{content.end_time}}</p>
+        <p>校区地址：{{content.address}}</p>
+        <p>联系方式：{{content.institution.tel}}</p>
+        <p>参与方式：点击立即领取，凭平台通知，到店支付即 可参与活动，活动最终解释权归该机构所有。</p>
+    </view>
+    <view class="btn"  bindtap="powerDrawer" data-status="{{content.status}}"  data-statu="open" data-id="{{content.id}}">{{content.status==0?'立即领取':'已领取'}}</view>
+</view> 
+
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+  <view class="motai_box">
+    <image src="../../../assets/img/success_icon.png"></image>
+    <view class="motai_box_title">领取成功</view>
+    <p>请到【我的】-【我的优惠券】中查看</p>
+    <view class="motai_btn" bindtap="select">确定</view>
+  </view>
+</view>

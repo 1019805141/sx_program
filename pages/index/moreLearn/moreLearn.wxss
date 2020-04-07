@@ -1,0 +1,323 @@
+/* pages/index/moreLearn/moreLearn.wxss */
+/* pages/index/search/search.wxss */
+.search {
+    position: relative;
+    padding: 30rpx 0;
+}
+
+.search>image {
+    width: 26rpx;
+    height: 26rpx;
+    position: absolute;
+    left: 26rpx;
+    top: 40%;
+}
+
+.search>input {
+    background: #F2F2F2;
+    border-radius: 30rpx;
+    height: 60rpx;
+    font-size: 28rpx;
+    padding-left: 60rpx;
+}
+
+.search>view {
+    border-left: 1px solid #808080;
+    padding-left: 20rpx;
+    position: absolute;
+    top: 34%;
+    right: 30rpx;
+    z-index: 1000;
+}
+
+.search>view>image {
+    width: 20rpx;
+    height: 20rpx;
+}
+
+
+.nav_tab {
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30rpx;
+}
+
+.show {
+    line-height: 100rpx;
+    text-align: center;
+    flex: 1;
+    color: #333333;
+    font-size: 30rpx;
+}
+
+.hidden {
+    line-height: 100rpx;
+    text-align: center;
+    color: #0da6ff;
+    flex: 1;
+    font-size: 30rpx;
+
+    border-bottom: 2px solid #0da6ff;
+}
+
+
+.index_jigou {
+    border: 1px solid #e6e6e6;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 16rpx;
+}
+
+.index_jigou_top>image {
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 50%;
+    float: left;
+    margin-top: 30rpx;
+}
+
+.index_jigou_text {
+    float: left;
+    width: 60%;
+    margin-left: 4%;
+}
+
+.index_jigou_text>p {
+    font-weight: bold;
+    font-size: 32rpx;
+    margin-bottom: 14rpx;
+    color: #333333;
+    display: block;
+}
+
+.index_jigou_text>view {
+    color: #808080;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 28rpx;
+    margin-bottom: 14rpx;
+}
+
+.index_jigou_top {
+    overflow: hidden;
+    padding: 25rpx;
+}
+
+.index_jigou_text div:nth-child(odd) {
+    background: #55C1FF;
+    color: #ffffff;
+    padding: 4rpx 8rpx;
+    border-radius: 8rpx;
+    margin-right: 10rpx;
+    font-size: 26rpx;
+}
+
+.index_jigou_text div:nth-child(even) {
+    background: #FF7555;
+    color: #ffffff;
+    padding: 4rpx 8rpx;
+    border-radius: 8rpx;
+    margin-right: 10rpx;
+    font-size: 26rpx;
+}
+
+.index_jigou_star {
+    clear: both;
+}
+
+.index_jigou_star>image {
+    width: 24rpx;
+    height: 23rpx;
+    float: left;
+    margin-right: 6rpx;
+    margin-top: 4rpx;
+}
+
+.index_jigou_star>p {
+    color: #808080;
+    font-size: 24rpx;
+    float: left;
+}
+
+.index_jigou_right {
+    float: right;
+    width: 110rpx;
+    height: 90rpx;
+    background: #0da6ff;
+    border-radius: 40px 0 0 40px;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    text-align: center;
+}
+
+.index_jigou_right>image {
+    width: 38rpx;
+    height: 38rpx;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10rpx;
+}
+
+.index_jigou_right>view {
+    color: #ffffff;
+    font-size: 28rpx;
+}
+
+.index_jigou_bottom {
+    padding: 15rpx 25rpx;
+    clear: both;
+    border-top: 1px solid #e6e6e6;
+    overflow: hidden;
+}
+
+.index_jigou_bottom>image {
+    width: 19rpx;
+    height: 29rpx;
+    margin-right: 20rpx;
+    float: left;
+    margin-top: 6rpx;
+}
+
+.index_jigou_bottom>p {
+    float: left;
+    color: #808080;
+    font-size: 26rpx;
+    margin-right: 20rpx;
+}
+
+.index_jigou_bottom>p>span {
+    color: #FF3B0D;
+}
+
+.zanwu {
+    text-align: center;
+    margin-top: 100rpx;
+}
+
+.zanwu>image {
+    width: 300rpx;
+    height: 260rpx;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 40rpx;
+}
+
+.zanwu>view {
+    margin-bottom: 10rpx;
+    color: #4D4D4D;
+    font-size: 28rpx;
+}
+
+.kclist {
+    border: 1px solid #E6E6E6;
+    padding: 14rpx 20rpx;
+    overflow: hidden;
+    margin-bottom: 30rpx;
+}
+
+.kclist>image {
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 50%;
+    float: left;
+}
+
+.kclist_text {
+    float: left;
+    margin-left: 20rpx;
+    width: 56%;
+}
+
+.kclist_text>view {
+    font-size: 30rpx;
+    color: #262626;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 20rpx;
+    margin-top: 12rpx;
+}
+
+.kclist_text {
+    font-size: 28rpx;
+    color: #808080;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    overflow: hidden;
+}
+.kclist_right{
+    float: right;
+    width: 20%;
+}
+.kclist_right_btn{
+    background: #0da6ff;
+    color: #ffffff;
+    font-size: 28rpx;
+    text-align: center;
+    height: 50rpx;
+    border-radius: 6rpx;
+    line-height: 50rpx;
+    margin-top: 12rpx;
+    margin-bottom: 20rpx;
+    padding: 0 6rpx;
+}
+.kclist_right_dw{
+    overflow: hidden;
+}
+.kclist_right_dw>image{
+    width: 20rpx;
+    height: 30rpx;
+    float: left;
+    margin-right: 14rpx;
+    margin-top: 6rpx;
+}
+.kclist_right_dw>p{
+    font-size: 28rpx;
+    color: #333333;
+}
+.kclist_right_dw>p>span{
+    color: #FF3B0D;
+}
+.quyulist_left>view{
+    margin-bottom: 40rpx;
+    font-size: 28rpx;
+}
+.nav_title{
+    margin-top: 10%;
+    position: relative;
+}
+.quyulist_right_active{
+    color: #0DA6FF!important;
+}
+.mar{
+    margin-top: 16%;
+    position: relative;
+}
+.hidden2{
+    color: #0DA6FF!important;
+}
+.zanwu {
+    text-align: center;
+    margin-top: 100rpx;
+}
+
+.zanwu>image {
+    width: 300rpx;
+    height: 260rpx;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 40rpx;
+}
+
+.zanwu>view {
+    margin-bottom: 10rpx;
+    color: #4D4D4D;
+    font-size: 28rpx;
+}

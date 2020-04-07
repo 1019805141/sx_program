@@ -1,0 +1,52 @@
+<!--pages/index/robbing/pay398/pay398.wxml-->
+<view class="container2">
+    <view class="title">个人信息</view>
+    <view class="biao">
+		<view>学生姓名</view>
+		<input type="text" bindinput="forName" />
+    </view>
+    <view class="biao">
+		<view>联系电话</view>
+		<input type="text" bindinput="forTel" />
+    </view>
+    
+    <view class="biao">
+		<view>学生年龄</view>
+		<view class='button_container'>
+			<block wx:for="{{buttons}}" wx:key="buttons">
+				<button class='{{item.checked?"checked_button":"normal_button"}}' data-id='{{item.id}}' data-name="{{item.name}}" bindtap='radioButtonTap'>{{item.name}}</button>
+			</block>
+		</view>
+    </view>
+    
+    <view class="title">课程信息</view>
+    <view class="mar">
+     <view class="taocan" wx:for="{{order}}" wx:key="key">
+        <image src="{{ipUrl + item.institution.logo}}"></image>
+        <view class="taocan_t">
+            <view>{{item.name}}</view>
+       
+            <div class="taocan_miaoshu">
+                {{item.institution.name}}
+            </div>
+            <div class="taocan_miaoshu2">
+                {{item.institution.address}}
+            </div>
+        </view>
+    </view>
+    </view>
+
+
+</view>
+
+<view class="pay">
+    <view class="pay_left">
+        <view>金额：<span>￥398.00</span></view>
+        <checkbox-group bindchange="checkboxChange" style="float: left;">
+            <checkbox class="weui-check" value="是否选中"/>
+        </checkbox-group>
+        <p>我已阅读并同意《用户购买协议》</p>
+    </view>
+    <view class="pay_right" bindtap="pay">立即支付</view>
+</view>
+

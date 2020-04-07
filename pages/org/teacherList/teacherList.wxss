@@ -1,0 +1,71 @@
+/* pages/org/teacherList/teacherList.wxss */
+.tab{
+    overflow: hidden;
+    padding-bottom: 20rpx;
+    text-align: center;
+    margin-top: 20rpx;
+}
+.tab>view{
+    color: #666666;
+    width: 20%;
+    float: left;
+    font-size: 32rpx;
+    padding-bottom: 16rpx;
+}
+.tab>.active{
+    color: #0DA6FF;
+    position: relative;
+}
+.line{
+    width: 72rpx;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    background: #0DA6FF;
+    left: 26%;
+}
+.teacher{
+    float: left;
+    width: 50%;
+    margin-top: 30rpx;
+    text-align: center;
+}
+.teacher>image{
+    width: 316rpx;
+    height: 400rpx;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 12rpx;
+}
+.teacher>view{
+    color: #262626;
+    margin-bottom: 10rpx;
+    font-size: 30rpx;
+    text-align: left;
+    margin-left: 14rpx;
+}
+.teacher>p{
+    font-size: 28rpx;
+    color: #808080;
+    text-align: left;
+    display: block;
+    margin-left: 14rpx;
+}
+.zanwu>image{
+    width: 362rpx;
+    height: 258rpx;
+    display: block;
+    margin: auto;
+}
+.zanwu{
+    overflow: hidden;
+    margin: 0rpx 0 30rpx 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 200rpx;
+}
+.zanwu>view{
+    display: block;
+    margin-top: 10rpx;
+    color: #666666;
+}

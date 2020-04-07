@@ -1,0 +1,63 @@
+/* pages/org/demeanor/demeanor.wxss */
+.tab {
+    overflow: hidden;
+    padding-bottom: 20rpx;
+    text-align: center;
+    margin-top: 20rpx;
+}
+
+.tab>view {
+    color: #666666;
+    width: 20%;
+    float: left;
+    font-size: 32rpx;
+    padding-bottom: 16rpx;
+}
+
+.tab>.active {
+    color: #0DA6FF;
+    position: relative;
+}
+
+.line {
+    width: 72rpx;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    background: #0DA6FF;
+    left: 26%;
+}
+.nav_tab {
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30rpx;
+    margin-top: 30rpx;
+}
+
+.show {
+    line-height: 80rpx;
+    text-align: center;
+    float: left;
+    width: 48%;
+    color: #ffffff;
+    font-size: 30rpx;
+    background: #CACACA;margin: 0 5rpx;
+
+}
+
+.hidden {
+    line-height: 80rpx;
+    text-align: center;
+    float: left;
+    width: 48%;
+    font-size: 30rpx;
+    background: #0DA6FF;
+    color: #ffffff;margin: 0 5rpx;
+
+}
+.img image{
+    width: 690rpx;
+    height: 360rpx;
+}

@@ -1,0 +1,69 @@
+/* pages/my/my.wxss */
+.mytop {
+    position: relative;
+}
+
+.mytop_bg {
+    width: 750rpx;
+    height: 238rpx;
+}
+
+.mytop_tx {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 7%;
+}
+
+.mytop_tx>image {
+    width: 128rpx;
+    height: 128rpx;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.mytop_tx>view {
+    font-size: 32rpx;
+    margin-top: 20rpx;
+    color: #ffffff;
+}
+
+.mybox {
+    background: #ffffff;
+    border-radius: 16rpx 16rpx 0 0;
+    position: relative;
+    margin-top: -12px;
+}
+
+.mylist image:first-child {
+    width: 50rpx;
+    height: 50rpx;
+    float: left;
+    margin-right: 20rpx;
+}
+
+.mylist image:last-child {
+    width: 13rpx;
+    height: 22rpx;
+    float: right;
+    margin-top: 15rpx;
+}
+
+.mylist>view {
+    color: #262626;
+    font-size: 30rpx;
+    float: left;
+    margin-top: 6rpx;
+}
+
+.mylist {
+    border-bottom: 1px solid #E6E6E6;
+    padding-bottom: 34rpx;
+    margin-top: 34rpx;
+    overflow: hidden;
+}
+
+.mygroup {
+    padding: 30rpx 0;
+}

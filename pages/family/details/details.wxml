@@ -1,0 +1,50 @@
+<!--pages/family/details/details.wxml-->
+<view class="details">
+    <view class="container2">
+        <view class="title">{{content.title}}</view>
+        <p class="time">2020.01.01</p>
+        <p class="time"><image src="../../../assets/img/liulan.png"></image>{{content.view_count == null?'0':content.view_count == ''?'0':content.view_count}}</p>
+        <p class="time"><image src="../../../assets/img/ren.png"></image>{{content.listen_count == null?'0':content.listen_count == ''?'0':content.listen_count}}人收听</p>
+        <view class="biaoqian">父母课堂</view>
+        <audio name="{{name}}" author="{{author}}" id="myAudio" src="{{ipUrl + content.radio}}" poster="../../../assets/img/logo.jpg"  controls="{{controls}}" loop></audio>
+    
+        <view class="datail">
+            <rich-text nodes="{{content.content}}"></rich-text>
+        </view>
+    </view>
+</view> 
+<view class="container2">
+    <view class="lytitle">
+        <view>家长留言</view>
+        <p bindtap="powerDrawer" data-statu="open">写留言</p>
+    </view>
+    <!-- 暂无留言提示 -->
+  
+
+<view class="list" wx:for="{{content.appraise}}" style="{{content.appraise.length>0?'display:block':'display: none'}}">
+        <image src="{{item.user.zz == 1?item.user.avatar: ipUrl +item.user.avatar}}"></image>
+        <view class="list_text">
+            <view class="list_name">{{item.user.nickname}}</view>
+            <view class="list_content">{{item.content}}</view>
+        </view>
+        <view class="list_time">{{item.created_at}}</view>
+    </view>
+      <view class="zanwu" style="{{content.appraise.length>0?'display:none':'display: block'}}">
+        <image src="../../../assets/img/zanwu1.png"></image>
+        <view>暂无留言，快来写下你的看法吧</view>
+    </view>
+</view>
+<!--mask-->
+
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+
+ <!--drawer content-->
+ <view class="drawer_title">留言</view>
+ <view class="drawer_content">
+     <textarea name="" value="{{value}}" placeholder="欢迎参与交流，优质留言将会优先展示哦~" bindinput="forText" maxlength="150" placeholder-style="color:#909090"></textarea>
+ </view>
+ <view class="btn_ok" bindtap="submit">发表留言</view>
+</view>

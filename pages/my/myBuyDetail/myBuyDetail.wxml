@@ -1,0 +1,62 @@
+<!--pages/my/myBuyDetail/myBuyDetail.wxml-->
+<view class="container2">
+    <view class="kecheng" wx:if="{{content.type ==1}}">
+        <i></i>
+        <view>99元限量课程</view>
+        <i></i>
+    </view>
+    <view class="kecheng" wx:else>
+        <i></i>
+        <view>398元限量课程</view>
+        <i></i>
+    </view>
+    <view class="title">课程信息</view>
+    <view wx:if="{{content.type ==1}}">
+        <view class="box">
+            <view class="box_top">
+                <image src="{{ipUrl+content.institution.logo}}"></image>
+                <view class="box_top_text">
+                    <view>文化艺术培训课程</view>
+                    <p>显示购买课程名称</p>
+                    <p>XXX教育培训机构</p>
+                </view>
+            <view class="{{content.status == 0?'daitiyan':content.status == 1?'yiwancheng':'daifukuan'}}">{{content.status == 0?'待体验':content.status == 1?'已完成':'待付款'}}</view>
+            </view>
+        </view>
+    </view>
+    <view wx:else>
+        <view class="box" wx:for="{{content.course}}">
+            <view class="box_top">
+                <image src="{{ipUrl+content.institution.logo}}"></image>
+                <view class="box_top_text">
+                    <view>{{item.name}}</view>
+                    <p>{{item.description}}</p>
+                </view>
+            <view class="{{content.status == 0?'daitiyan':content.status == 1?'yiwancheng':'daifukuan'}}">{{content.status == 0?'待体验':content.status == 1?'已完成':'待付款'}}</view>
+            </view>
+        </view>
+    </view>
+  
+    <view class="miaoshu mar">
+        <view class="title">机构信息</view>
+        <view class="text">机构名称<p>{{content.institution.name}}</p></view>
+        <view class="text">机构热线<p class="tel">{{content.institution.tel}}</p></view>
+        <view class="text">机构地址<p>{{content.institution.address}}</p></view>
+    </view>
+    <view class="miaoshu">
+        <view class="title">预约信息</view>
+        <view class="text">申请人<p>{{content.name}}</p></view>
+        <view class="text">联系电话<p class="tel">0531-123456789</p></view>
+        <view class="text">孩子年龄<p>{{content.age}}</p></view>
+        <view class="text">支付金额<p class="price">￥{{content.price}}</p></view>
+        <!-- <view class="text">申请时间<p>{{}}</p></view>
+        <view class="text">支付编号<p>2019-12-12</p></view> -->
+    </view>
+    <view class="btn_group" wx:if="{{content.status == 3}}">
+        <view class="btn" bindtap="goPay">继续付款</view>
+    </view>
+    <!-- <view class="btn_group">
+        <view class="btn">去评价</view>
+        <view class="btn">查看评价</view>
+    </view> -->
+</view>

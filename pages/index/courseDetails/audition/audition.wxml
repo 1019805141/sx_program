@@ -1,0 +1,31 @@
+<!--预约试听-->
+<view class="container2">
+	<view class="top">
+		<view class="top_text">
+			<image src="{{ipUrl + detail.image[0]}}"></image>
+			<view>
+				<div>{{detail.name}}</div>
+				<span>{{detail.institution.name}}</span>
+				<span>{{detail.institution.address}}</span>
+			</view>
+		</view>
+		<image class="bg" src="../../../../assets/img/shiting.png"></image>
+	</view>
+	<view class="biao">
+		<view>学生姓名</view>
+		<input type="text" bindinput="forName" />
+	</view>
+	<view class="biao">
+		<view>联系电话</view>
+		<input type="text" bindinput="forTel" />
+	</view>
+	<view class="biao">
+		<view>学生年龄</view>
+		<view class='button_container'>
+			<block wx:for="{{buttons}}" wx:key="buttons">
+				<button class='{{item.checked?"checked_button":"normal_button"}}' data-id='{{item.id}}' data-name="{{item.name}}" bindtap='radioButtonTap'>{{item.name}}</button>
+			</block>
+		</view>
+	</view>
+    <view class="btn" bindtap="submitForm">提交预约</view>
+</view>

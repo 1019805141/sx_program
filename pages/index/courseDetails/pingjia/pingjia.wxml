@@ -1,0 +1,32 @@
+<!--课程评价-->
+
+<view class="pllist" wx:for="{{appraisesList}}">
+    <view class="pllist_x">
+        <image src="{{item.user.avatar}}"></image>
+        <view class="pllist_x_right">
+            <view class="pllist_top">
+                <view>{{item.user.nickname}}</view>
+                <p>{{item.course.name}}</p>
+            </view>
+            <view class="pllist_bottom">
+                <image wx:if='{{item.xiaoshu}}' wx:for="{{item.grade}}" wx:for-index='index'
+                wx:for-item="items"
+                src="{{item.xiaoshuz==index?'../../../../assets/img/s11.png':'../../../../assets/img/s1.png'}}">
+            </image>
+            <image wx:if='{{!item.xiaoshu}}' wx:for-index='index' wx:for-item="items"
+                wx:for="{{item.grade}}" src="../../../../assets/img/s1.png"></image>
+            <image wx:for="{{(item.xiaoshu?4:5) - item.grade}}" src="../../../../assets/img/s2.png">
+            </image>
+                <p><span>{{item.grade}}</span>分</p>
+            </view>
+        </view>
+    </view>
+    <!-- <view class="pllist_j">报名机构：某某培训机构</view> -->
+    <view class="pllist_m" wx:for="{{item.content}}" wx:for-item="items">{{items.key}}{{items.value}}</view>
+
+    <view class="time">
+        <view>报名时间：{{item.order.created_at}}</view>
+        <view>评价时间：{{item.created_at}}</view>
+    </view>
+</view>
+<view class="bottom_footer" style="{{bottomStyle}}">已经到底啦~</view>

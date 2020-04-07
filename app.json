@@ -1,0 +1,88 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/index",
+    "pages/my/subComment/subComment",
+    "pages/my/settled/settled",
+    "pages/my/myCommentDe398/myCommentDe398",
+    "pages/my/myCommentDe/myCommentDe",
+    "pages/my/myComment/myComment",
+    "pages/my/myBuyDetail/myBuyDetail",
+    "pages/my/myBuy/myBuy",
+    "pages/my/myAuditDetail/myAuditDetail",
+    "pages/my/myAuditioning/myAuditioning",
+    "pages/my/cashDetail/cashDetail",
+    "pages/my/couponDetail/couponDetail",
+    "pages/my/coupon/coupon",
+    "pages/index/robbing/paySuccess/paySuccess",
+    "pages/index/robbing/pay98/pay98",
+    "pages/index/robbing/Detail98/Detail98",
+    "pages/index/robbing/pay398/pay398",
+    "pages/index/robbing/meal398/meal398",
+    "pages/index/robbing/Detail398/Detail398",
+    "pages/index/robbing/robbing",
+    "pages/index/cashDetail/cashDetail",
+    "pages/index/couponDetail/couponDetail",
+    "pages/index/coupon/coupon",
+    "pages/my/updateUser/updateUser",
+    "pages/my/userInfo/userInfo",
+    "pages/org/demeanor/demeanor",
+    "pages/org/comment/comment",
+    "pages/org/teacherList/teacherList",
+    "pages/org/curriculum/curriculum",
+    "pages/org/teacherDe/teacherDe",
+    "pages/org/org",
+    "pages/index/courseDetails/courseDetails",
+    "pages/index/evaluate/evaluate",
+    "pages/index/courseDetails/audition/audition",
+    "pages/index/courseDetails/success/success",
+    "pages/index/courseDetails/pingjia/pingjia",
+    "pages/index/institutions/institutions",
+    "pages/index/search/search",
+    "pages/index/moreLearn/moreLearn",
+    "pages/family/details/details",
+    "pages/family/family",
+    "pages/family/more/more",
+    "pages/my/my",
+    "pages/logs/logs",
+    "pages/index/cash/cash",
+    "pages/my/subComment398/subComment398"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0da6ff",
+    "navigationBarTitleText": "尚贤教育",
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "tabBar": {
+    "color": "#808080",
+    "selectedColor": "#0da6ff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/img/m1.png",
+        "selectedIconPath": "assets/img/n1.png"
+      },
+      {
+        "pagePath": "pages/family/family",
+        "text": "父母课堂",
+        "iconPath": "assets/img/m2.png",
+        "selectedIconPath": "assets/img/n2.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "assets/img/m3.png",
+        "selectedIconPath": "assets/img/n3.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

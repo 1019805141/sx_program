@@ -1,0 +1,120 @@
+/* pages/my/coupon/coupon.wxss */
+
+
+.nav_tab {
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30rpx;
+}
+
+.show {
+    line-height: 80rpx;
+    text-align: center;
+    flex: 1;
+    color: #333333;
+    font-size: 30rpx;
+}
+
+.hidden {
+    line-height: 80rpx;
+    text-align: center;
+    color: #0da6ff;
+    flex: 1;
+    font-size: 30rpx;
+    border-bottom: 2px solid #0da6ff;
+}
+.list_top>image:first-child{
+    width: 98rpx;
+    height: 98rpx;
+    border-radius: 50%;
+    float: left;
+}
+.list_top>image:last-child{
+    width: 106rpx;
+    height: 80rpx;
+    float: right;
+}
+.list{
+    border: 1px solid #E6E6E6;
+    border-radius: 10rpx;
+    padding: 30rpx;
+    overflow: hidden;
+    margin-bottom: 30rpx;
+}
+.list_top_left{
+    float: left;
+    margin-left: 20rpx;
+    width: 64%;
+}
+.list_top_left>view{
+    font-size: 30rpx;
+    margin-bottom: 10rpx;
+    font-weight: bold;
+}
+.list_top_left>span{
+    font-size: 28rpx;
+}
+.list_top{
+    border-bottom: 1px solid #e6f6ff;
+    overflow: hidden;
+    padding-bottom: 20rpx;
+}
+.list_bottom{
+    overflow: hidden;
+    padding-top: 20rpx;
+}
+.list_bottom_left{
+    float: left;
+    overflow: hidden;
+    margin-bottom: 20rpx;
+}
+.list_bottom_left>view{
+    float: left;
+    font-size: 26rpx;
+    color: #808080;
+}
+.list_bottom_left>image{
+    width: 20rpx;
+    height: 11rpx;
+    margin-left: 8rpx;
+    float: left;
+    margin-top: 14rpx;
+}
+.list_bottom_right{
+    float: right;
+}
+.list_bottom_right>p{
+    color: #808080;
+    font-size: 26rpx;
+}
+.list_bottom_right>p>span{
+    color: #FF3B0D;
+}
+.list_bottom_text{
+    margin-top: 20rpx;
+    clear: both;
+    font-size: 26rpx;
+    color: #808080;
+}
+.list_bottom_text>view{
+    margin-bottom: 10rpx;
+}
+.zanwu{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 300rpx;
+}
+.zanwu image{
+    width: 293rpx;
+    height: 265rpx;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 70rpx;
+}
+.zanwu view{
+    font-size: 28rpx;
+    color: #4D4D4D;
+}

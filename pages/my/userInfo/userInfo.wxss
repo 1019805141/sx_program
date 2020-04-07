@@ -1,0 +1,49 @@
+/* pages/my/userInfo/userInfo.wxss */
+.box>image{
+    width: 128rpx;
+    height: 128rpx;
+    border-radius: 50%;
+    position: absolute;
+    left: 42%;
+    top: -7%;
+}
+.box{
+    border-radius: 20rpx;
+    background: #0DA6FF;
+    width: 690rpx;
+    height: 900rpx;
+    position: relative;
+    margin-top: 100rpx;
+}
+.box_list{
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 10rpx;
+    margin-bottom: 60rpx;
+
+}
+.box_list p{
+    display: inline-block;
+    color: #ffffff;
+    font-weight: bolder;
+    margin-right: 30rpx;
+}
+.box_list span{
+    display: inline-block;
+    color: #ffffff;
+}
+.box_group{
+    width: 500rpx;
+    margin: 0 auto;
+    padding-top: 120rpx;
+}
+.btn{
+    text-align: center;
+    background: #ffffff;
+    color:#0DA6FF;
+    width: 500rpx;
+    margin: 0 auto;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 20rpx;
+    margin-top: 100rpx;
+}

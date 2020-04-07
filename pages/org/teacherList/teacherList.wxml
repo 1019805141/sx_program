@@ -1,0 +1,27 @@
+<!--pages/org/teacherList/teacherList.wxml-->
+<view class="container2">
+    <view class="tab">
+        <view bindtap="goIndex">首页
+        </view>
+        <view class="active">师资
+            <view class="line"></view>
+
+        </view>
+        <view bindtap="goCurriculum">课程</view>
+        <view bindtap="goDemeanor">风采</view>
+        <view bindtap="goComment">评价</view>
+    </view>
+</view>
+<view class="jiange"></view>
+<view class="zanwu" style="{{coursesList.length>0?'display:none':'display:block'}}">
+    <image src="../../../assets/img/zanwuimg.png"></image>
+    <view>暂无数据</view>
+</view>
+<view class="container2" style="{{coursesList.length>0?'display:block':'display:none'}}">
+    <view class="teacher" wx:for="{{coursesList}}" bindtap="goDe" data-id="{{item.id}}">
+        <image src="{{ipUrl + item.image}}"></image>
+        <view>{{item.name}}</view>
+        <p>主授课程：{{item.course}}</p>
+    </view>
+</view>
+<view class="bottom_footer" style="{{bottomStyle}}">已经到底啦~</view>

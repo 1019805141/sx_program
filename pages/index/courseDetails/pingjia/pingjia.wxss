@@ -1,0 +1,76 @@
+/* pages/index/courseDetails/pingjia/pingjia.wxss */
+.pllist{
+    padding: 30rpx;
+    border-bottom: 3px solid #E1E1E1;
+    overflow: hidden;
+    position: relative;
+}
+.pllist_x{
+    overflow: hidden;
+    margin-bottom: 20rpx;
+}
+.pllist_x>image{
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20rpx;
+}
+.pllist_x_right{
+    float: left;
+}
+.pllist_top>view{
+    display: inline-block;
+    font-size: 30rpx;
+    margin-right: 30rpx;
+}
+.pllist_top>p{
+    display: inline-block;
+    font-size: 26rpx;
+    background: #0DA6FF;
+    color: #ffffff;
+    border-radius: 6rpx;
+    padding: 0 6px;
+}
+.pllist_bottom>image{
+    width: 24rpx;
+    height: 23rpx;
+    margin-right: 4rpx;
+    display: inline-block;
+}
+.pllist_bottom>p{
+    font-size: 26rpx;
+    display: inline-block;
+    margin-left: 10rpx;
+}
+.pllist_bottom>p>span{
+    color: #FF3B0D;
+    margin-right: 10rpx;
+}
+.pllist_x{
+    overflow: hidden;
+}
+.pllist_j{
+    font-size: 24rpx;
+    color: #222222;
+    margin-bottom: 20rpx;
+}
+.pllist_m{
+    margin-bottom: 20rpx;
+    font-size: 28rpx;
+    color: #666666;
+}
+.time{
+    overflow: hidden;
+}
+.time view:first-child{
+    float: left;
+    font-size: 24rpx;
+    color: #222222;
+}
+.time view:last-child{
+    float: left;
+    font-size: 24rpx;
+    color: #222222;
+    margin-top: 20rpx;
+}

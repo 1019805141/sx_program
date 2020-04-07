@@ -1,0 +1,134 @@
+/* pages/my/subComment/subComment.wxss */
+.box{
+    border: 1px solid #E6E6E6;
+    margin-bottom: 30rpx;
+    position: relative;
+}
+.box_top{
+    padding: 20rpx;
+    overflow: hidden;
+}
+.box_top>image{
+    width: 130rpx;
+    height: 130rpx;
+    display: block;
+    float: left;
+    margin-right: 20rpx;
+}
+.box_top_text{
+    float: left;
+    width: 76%;
+}
+.box_top_text>view{
+    font-size: 30rpx;
+    color: #262626;
+}
+.box_top_text>p{
+    color: #808080;
+    font-size: 26rpx;
+    margin-top: 10rpx;
+    display: block;
+}
+.daitiyan{
+    float: right;
+    font-size: 28rpx;
+    color: #0DA6FF;
+    border-radius: 6rpx;
+    margin-top: 40rpx;
+}
+.yiwancheng{
+    float: right;
+    font-size: 28rpx;
+    color: #893BFF;
+    border-radius: 6rpx;
+    margin-top: 40rpx;
+}
+.daifukuan{
+    float: right;
+    font-size: 28rpx;
+    color: #FF3B0D;
+    border-radius: 6rpx;
+    margin-top: 40rpx;
+}
+.box_bottom{
+    padding: 10rpx 0;
+    border-top: 1px solid #E6E6E6;
+    padding-left: 30rpx;
+}
+.box_bottom>image{
+    width: 20rpx;
+    height: 30rpx;
+    float: left;
+    display: block;
+    margin-right: 15rpx;
+    margin-top: 6rpx;
+}
+.box_bottom>view{
+    color: #808080;
+    font-size: 28rpx;
+}
+.mar{
+    margin-top: 30rpx;
+}
+.pingjia{
+    margin-top: 30rpx;
+}
+.pingfen_l{
+    color: #333333;
+    font-size: 28rpx;
+    display: inline-block;
+    margin-right: 20rpx;
+}
+.pingfen image{
+    width: 24rpx;
+    height: 24rpx;
+    display: inline-block;
+    margin-right: 6rpx;
+}
+.pingfen_num{
+    margin-right: 20rpx;
+    font-size: 28rpx;
+    color: #666666;
+    display: inline-block;
+    margin-left: 20rpx;
+}
+.pingjia{
+    background: #F2F2F2;
+    padding: 30rpx 0;
+}
+.pingjia_box{
+    overflow: hidden;
+    margin-bottom: 30rpx;
+}
+.pingjia_box>view{
+    clear: #262626;
+    float: left;
+    margin-right: 14rpx;
+}
+.pingjia_box>input{
+    float: left;
+    color: #666666;
+}
+.add{
+    width: 180rpx;
+    height: 180rpx;
+    margin-right: 20rpx;
+    display: inline-block;
+}
+.addList{
+    margin: 30rpx 0;    
+}
+.btn_group{
+    margin: 30rpx auto;
+    text-align: center;
+}
+.btn_group>view{
+    background: #0DA6FF;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10rpx;
+    width: 230rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 0 auto;
+}

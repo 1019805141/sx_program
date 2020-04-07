@@ -1,0 +1,89 @@
+/* pages/my/myAuditDetail/myAuditDetail.wxss */
+
+.box{
+    border: 1px solid #E6E6E6;
+    margin-bottom: 30rpx;
+    margin-top: 30rpx;
+}
+.box_top{
+    padding: 20rpx;
+    overflow: hidden;
+}
+.box_top>image{
+    width: 130rpx;
+    height: 130rpx;
+    display: block;
+    float: left;
+    margin-right: 20rpx;
+}
+.box_top_text{
+    float: left;
+    width: 56%;
+}
+.box_top_text>view{
+    font-size: 30rpx;
+    color: #262626;
+    margin-top: 10rpx;
+    margin-bottom: 20rpx;
+}
+.box_top_text>p{
+    color: #808080;
+    font-size: 28rpx;
+    margin-top: 10rpx;
+}
+.daishiting{
+    float: right;
+    font-size: 28rpx;
+    border: 1px solid #FF3B0D;
+    color: #FF3B0D;
+    padding: 6rpx 20rpx;
+    border-radius: 6rpx;
+    margin-top: 40rpx;
+}
+.yiwancheng{
+    float: right;
+    font-size: 28rpx;
+    border: 1px solid #893BFF;
+    color: #893BFF;
+    padding: 6rpx 20rpx;
+    border-radius: 6rpx;
+    margin-top: 40rpx;
+}
+.title{
+    font-size: 30rpx;
+    font-weight: bold;
+    margin-bottom: 30rpx;
+    color: #262626;
+}
+.text{
+    color: #666666;
+    font-size: 28rpx;
+    margin-bottom: 20rpx;
+}
+.text>p{
+    color: #262626;
+    margin-left: 30rpx;
+}
+.tel{
+    color: #199CFF!important;
+}
+.mar{
+    margin-bottom: 30rpx;
+    border-bottom: 1px solid #E6E6E6;
+    padding-bottom: 30rpx;
+}
+.btn_group{
+    text-align: center;
+    margin-top: 50rpx;
+}
+.btn{
+    background: #0DA6FF;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10rpx;
+    width: 226rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 0 auto;
+    margin-top: 30rpx;
+}

@@ -1,0 +1,40 @@
+/* pages/index/courseDetails/success/success.wxss */
+.img{
+  width: 330rpx;
+  height: 248rpx;
+  display: block;
+  margin:0 auto;
+  margin-top: 20%;
+}
+.text{
+  text-align: center;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  color: #666666;
+  font-size: 30rpx;
+}
+.mar{
+  overflow: hidden;
+  margin-top: 70rpx;
+  padding: 0 50rpx;
+}
+.mar view:first-child{
+  background: #0DA6FF;
+  width: 42%;
+  color: #ffffff;
+  float: left;
+  text-align: center;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+}
+.mar view:last-child{
+  background: #0DA6FF;
+  width: 42%;
+  color: #ffffff;
+  float: right;
+  text-align: center;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+}

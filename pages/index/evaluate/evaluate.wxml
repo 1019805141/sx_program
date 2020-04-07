@@ -1,0 +1,97 @@
+<!--评价-->
+<view class="container2">
+    <view class="page" style="{{pageHeight}}">
+        <view class="nav">
+            <view class="nav-son {{shownavindex == 0? 'active' : ''}}" bindtap="searchAll" data-nav="0">
+                <view class="content">综合排序</view>
+            </view>
+            <view class="nav-son {{shownavindex == 4? 'active' : ''}}" bindtap="searchDistance" data-nav="4">
+                <view class="content">距离排序</view>
+            </view>
+            <view class="nav-son {{shownavindex == 1? 'active' : ''}}" bindtap="listqy" data-nav="1">
+                <view class="content">区域</view>
+                <view class="icon"></view>
+            </view>
+    
+            <view class="nav-son {{shownavindex == 3? 'active' : ''}}" bindtap="listpx" data-nav="3">
+                <view class="content">类别</view>
+                <view class="icon"></view>
+            </view>
+        </view>
+            <!-- 区域筛选 -->
+            <view class="quyu {{qyopen ? 'slidown' : 'slidup'}} {{qyshow ? 'disappear':''}}">
+                <view class="quyulist">
+                    <view class="quyulist_left">
+                    <view wx:for="{{qiyulist}}" class="{{selectedquyu==index?'hidden2':'show2'}} quyuleftlist" data-index='{{index}}' data-code="{{item.code}}" bindtap="selectedquyu">{{item.name}}</view>
+                    </view>
+                    <view class="quyulist_right">
+                            <view class="quyulist_right_all quyulist_right_active" bindtap="searchqyAll">全部</view>
+                            <view wx:for="{{quList}}" data-code="{{item.code}}" data-index='{{index}}' bindtap="selectSearch">{{item.name}}</view>
+                    </view>
+                </view>
+                
+            </view>
+    
+    
+            <!-- 排序筛选 -->
+            <view class="temp temp2 contentCenter {{pxopen ? 'slidown' : 'slidup'}} {{pxshow ? 'disappear':''}}">
+                <view wx:for="{{iconList}}" bindtap='selectPX' data-index="{{index}}" data-id="{{item.id}}"
+                    class="pxTable {{pxIndex == index?'current4':''}}">
+                    {{item.name}}
+                </view>
+            </view>
+            <view class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>
+        </view>
+</view>
+
+<view class="zanwu" style="{{pllist.length>0?'display:none':'display:block'}}">
+    <image src="../../../assets/img/zanwuimg.png"></image>
+    <view>暂无评论信息</view>
+</view>
+
+
+<view class="container2"  style="{{pllist.length>0?'display:block':'display:none'}}">
+    <view class="pl">
+        <view class="plbox">
+            <view class="plbox_left">
+                <p><span>{{count.count}}</span>分</p>
+                <view>
+                    <image wx:if='{{count.xiaoshu}}' wx:for="{{count.count}}" wx:for-index='index' wx:for-item="items" src="{{count.xiaoshuz==index?'../../../assets/img/s11.png':'../../../assets/img/s1.png'}}">
+                    </image>
+                    <image wx:if='{{!count.xiaoshu}}' wx:for-index='index' wx:for-item="items" wx:for="{{count.count}}" src="../../../assets/img/s1.png"></image>
+                    <image wx:for="{{(count.xiaoshu?4:5) - count.count}}" src="../../../assets/img/s2.png"></image>
+                </view>
+            </view>
+            <view class="plbox_right">
+                <view>评价均来自报名学员的真实评价</view>
+                <p>{{pllist.length}}条真实评价</p>
+            </view>
+        </view>
+
+    </view>
+</view>
+<view class="pllist" wx:for="{{pllist}}" wx:key="key" style="{{pllist.length>0?'display:block':'display:none'}}">
+    <view class="pllist_x">
+        <image src="{{ipUrl +item.avatar}}"></image>
+        <view class="pllist_x_right">
+            <view class="pllist_top">
+                <view>{{item.name}}</view>
+                <p wx:for='{{item.institution.categories}}' wx:for-index='index'
+                wx:for-item="items">{{items.name}}</p>
+            </view>
+            <view class="pllist_bottom">
+                <image wx:if='{{item.xiaoshu}}' wx:for="{{item.grade}}" wx:for-index='index' wx:for-item="items" src="{{item.xiaoshuz==index?'../../../assets/img/s11.png':'../../../assets/img/s1.png'}}">
+                </image>
+                <image wx:if='{{!item.xiaoshu}}' wx:for-index='index' wx:for-item="items" wx:for="{{item.grade}}" src="../../../assets/img/s1.png"></image>
+                <image wx:for="{{(item.xiaoshu?4:5) - item.grade}}" src="../../../assets/img/s2.png"></image>
+                <p><span>{{item.grade}}</span>分</p>
+            </view>
+        </view>
+    </view>
+    <view class="pllist_j">报名机构：{{item.institution.name}}</view>
+    <view class="pllist_m" wx:for="{{item.content}}" wx:for-index='index' wx:for-item="items">{{items.key}}{{items.value}}</view>
+    <view class="time">
+        <view>报名时间：{{item.join_time}}</view>
+        <view>评价时间：{{item.created_at}}</view>
+    </view>
+</view>

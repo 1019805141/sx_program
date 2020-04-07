@@ -1,0 +1,24 @@
+<!--pages/family/family.wxml-->
+<view class="banner">
+    <image src="../../assets/img/banner.png"></image>
+</view>
+<view class="container2">
+    <view class="index_title">
+        <view class="index_title_left">
+          <p>父母课堂</p>
+          <image src="../../assets/img/index_yuan3.png"></image>
+        </view>
+        <view class="index_title_right" bindtap="goMore">更多></view>
+      </view>
+    <view class="list" wx:for="{{list}}" bindtap="goDetail" data-id="{{item.id}}">
+        <image wx:if="{{item.image == null || item.image == ''}}" src="../../assets/img/zanwulist.png"></image>
+        <image wx:else src="{{ipUrl+item.image}}"></image>
+        <view class="list_text">
+            <view>{{item.title}}</view>
+            <p>{{item.updated_at[0]}}</p>
+            <p><image src="../../assets/img/time.png"></image>{{item.updated_at[1]}}</p>
+            <p>浏览量：{{item.view_count}}</p>
+        </view>
+    </view>
+  
+</view>

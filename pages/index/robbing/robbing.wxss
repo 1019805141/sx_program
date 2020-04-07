@@ -1,0 +1,86 @@
+/* pages/index/robbing/robbing.wxss */
+.banner{
+    width: 750rpx;
+    height:400rpx;
+    display: block;
+}
+.title{
+    color: #909090;
+    margin: 20rpx 0;
+    font-size: 24rpx;
+}
+.taocan{
+    border: 1px solid #eff3f7;
+    border-radius: 10rpx;
+    padding: 15rpx;
+    overflow: hidden;
+    margin-bottom: 20rpx;
+}
+.taocan>image{
+    width: 190rpx;
+    height: 160rpx;
+    border-radius: 10rpx;
+    float: left;
+}
+.taocan_t{
+    float: left;
+    margin-left: 20rpx;
+    width: 68%;
+}
+.taocan_t>view{
+    color: #333333;
+    float: left;
+    margin-bottom: 14rpx;
+}
+.taocan_t>span{
+    float: right;
+    color: #FF5D51;
+    display: inline-block;
+}
+.taocan_biaoqian{
+    display: block;
+    margin-top: 10rpx;
+    clear: both;
+    margin-bottom: 30rpx;
+}
+.taocan_biaoqian>li{
+    font-size: 24rpx;
+    color: #0DA6FF;
+    border: 1px solid #0DA6FF;
+    border-radius: 100rpx;
+    padding:4rpx 14rpx;
+    margin-right: 10rpx;
+}
+.taocan_dw{
+    float: right;
+}
+.taocan_dw>image{
+    width: 19rpx;
+    height: 29rpx;
+    display: block;
+    float: left;
+}
+.taocan_dw>p{
+    color: #333333;
+    float: left;
+    margin-left: 10rpx;
+}
+.taocan_miaoshu{
+    display: block;
+    margin-top: 10rpx;
+    clear: both;
+    margin-bottom: 30rpx;
+    color: #565656;
+    font-size: 26rpx;
+}
+.more{
+    text-align: center;
+    color:#0DA6FF ;
+    font-size: 26rpx;
+}
+.more>image{
+    display: inline-block;
+    width: 22rpx;
+    height: 12rpx;
+    margin-left: 6rpx;
+}

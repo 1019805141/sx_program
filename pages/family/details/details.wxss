@@ -1,0 +1,240 @@
+/* pages/family/details/details.wxss */
+page{
+    background: #f2f2f2;
+}
+.title{
+    font-size: 40rpx;
+    padding-bottom: 30rpx;
+    padding-top: 24rpx;
+}
+.time{
+    float: left;
+    color: #AFAFAF;
+    margin-right: 24rpx;
+    font-size: 26rpx;
+    margin-top: 6rpx;
+}
+.time>image{
+    float: left;
+    margin-right: 10rpx;
+    width: 26rpx;
+    height: 26rpx;
+    margin-top: 8rpx;
+}
+.details{
+    background: #ffffff;
+    overflow: hidden;
+    padding-bottom: 40rpx;
+}
+.biaoqian{
+    border: 1px solid #0da6ff;
+    color: #0da6ff;
+    padding: 4rpx 8rpx;
+    float: left;
+    font-size: 26rpx;
+    border-radius: 6rpx;
+    margin-bottom: 20rpx;
+}
+.datail{
+    margin-top: 30rpx;
+}
+.datail>p{
+    line-height: 60rpx;
+    display: block;
+}
+.lytitle{
+    padding: 30rpx 0;
+    overflow: hidden;
+}
+.lytitle>view{
+    float: left;
+    color: #909090;
+    font-size: 26rpx;
+}
+.lytitle>p{
+    color:#0DA6FF;
+    float: right;
+    font-size: 26rpx;
+}
+.zanwu{
+    width: 100%;
+    text-align: center;
+    margin-top: 60rpx;
+}
+.zanwu>image{
+    width: 67rpx;
+    height: 64rpx;
+    display: block;
+    margin: 0 auto;
+}
+.zanwu>view{
+    color: #B1B1B1;
+    margin-top: 20rpx;
+    font-size: 26rpx;
+}
+.list{
+    overflow: hidden;
+    margin-bottom: 30rpx;
+    position: relative;
+}
+.list>image{
+    width: 64rpx;
+    height: 64rpx;
+    border-radius: 6rpx;
+    float: left;
+}
+.list_text{
+    float: left;
+    width: 85%;
+    margin-left: 20rpx;
+}
+.list_name{
+    color: #909090;
+    font-size: 28rpx;
+    margin-bottom: 4rpx;
+
+}
+.list_content{
+    color: #333333;
+    font-size: 28rpx;
+}
+.list_time{
+    color: #909090;
+    font-size: 28rpx;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+/*mask*/
+
+.drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #000;
+    opacity: 0.4;
+    overflow: hidden;
+   }
+   
+   /*content*/
+   
+   .drawer_box {
+    width: 510rpx;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    z-index: 1001;
+    background: #fafafa;
+    margin: -150px 50rpx 0 50rpx;
+    border-radius: 10rpx;
+    padding-bottom: 30rpx;
+   }
+   
+   .drawer_title {
+    padding: 15px;
+    font: 30rpx;
+    text-align: center;
+   }
+   
+   .text {
+    font: 20px "microsoft yahei";
+    text-align: center;
+   }
+   
+   .drawer_content {
+       padding-bottom: 20rpx;
+   }
+   
+   .btn_ok {
+    padding: 8px;
+    font-size: 28rpx;
+    text-align: center;
+    /* border-top: 1px solid #e8e8ea; */
+    color: #ffffff;
+    background: #0da6ff;
+    width: 320rpx;
+    border-radius: 50rpx;
+    margin: 0 auto;
+   }
+   
+   .bottom {
+    padding-bottom: 20px;
+   }
+   
+   .bubble {
+    position: relative;
+    overflow: hidden;
+   }
+   
+   .bubble:after {
+    content: "";
+    background: #999;
+    position: absolute;
+    width: 750rpx;
+    height: 750rpx;
+    left: calc(50% - 375rpx);
+    top: calc(50% - 375rpx);
+    opacity: 0;
+    margin: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.4s ease-in-out;
+   }
+   
+   .bubble:active:after {
+    transform: scale(0);
+    opacity: 1;
+    transition: 0s;
+   }
+   .drawer_content textarea{
+       width: 430rpx;
+       background: #eeeeee;
+       margin: 0 auto;
+       height: 220rpx;
+       border-radius: 10rpx;
+       padding: 10rpx;
+       font-size: 28rpx;
+   }
+   .audio {
+    flex-direction: row;
+  }
+  
+  .audio-img {
+    width: 200rpx;
+    height: 200rpx;
+  }
+  
+  .cover-img {
+    width: 150rpx;
+    height: 150rpx;
+    margin: 20rpx 25rpx;
+  }
+  
+  .audio-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20rpx;
+    font-size: 25rpx;
+    width: 560rpx;
+    padding-right: 25rpx;
+  }
+  
+  .audio-singer {
+    margin-top: 10rpx;
+  }
+  
+  .slider {
+    margin: 10rpx 0 0 0;
+  }
+  
+  .time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20rpx;
+  }
+  

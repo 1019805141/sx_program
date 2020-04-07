@@ -1,0 +1,84 @@
+<!--pages/org/comment/comment.wxml-->
+<view class="container2">
+    <view class="tab">
+        <view bindtap="goIndex">首页
+        </view>
+        <view bindtap="goTeacher">师资</view>
+        <view bindtap="goCurriculum">课程</view>
+        <view bindtap="goDemeanor">风采</view>
+        <view class="active">评价
+            <view class="line"></view>
+        </view>
+    </view>
+</view>
+<view class="jiange"></view>
+
+<view class="zanwu" style="{{appraisesList.length>0?'display:none':'display:block'}}">
+    <image src="../../../assets/img/zanwuimg.png"></image>
+    <view>暂无评论信息</view>
+</view>
+
+
+
+<view style="{{appraisesList.length>0?'display:block':'display:none'}}">
+    <view class="container2">
+        <view class="pinglun_top">
+            <view class="pinglun_top_left">
+                <view>
+                    <span>{{xingji.aggregate}}</span>分
+                </view>
+                <p>
+                    <image wx:if='{{xingji.xiaoshu}}' wx:for="{{xingji.aggregate}}" wx:for-index='index'
+                    wx:for-item="items"
+                    src="{{xingji.xiaoshuz==index?'../../../assets/img/s11.png':'../../../assets/img/s1.png'}}">
+                </image>
+                <image wx:if='{{!xingji.xiaoshu}}' wx:for-index='index' wx:for-item="items"
+                    wx:for="{{xingji.aggregate}}" src="../../../assets/img/s1.png"></image>
+                <image wx:for="{{(xingji.xiaoshu?4:5) - xingji.aggregate}}" src="../../../assets/img/s2.png">
+                </image>
+                </p>
+            </view>
+            <view class="pinglun_top_right">
+                <view>评价均来自报名学员真实评价</view>
+                <span>{{xingji.appraise_count}}条真实评价</span>
+            </view>
+        </view>
+    </view>
+    <view class="jiange"></view>
+    <view class="container2">
+        <view class="scroll-view-item_H" wx:for="{{appraisesList}}">
+            <view class="scroll_top">
+                <image src="{{item.user.avatar}}"></image>
+                <view class="scroll_top_right">
+                    <view class="scroll_top_right_l">
+                        <view>{{item.user.nickname}}</view>
+                        <p>{{item.course.name}}</p>
+                        <div>
+                            <image wx:if='{{item.xiaoshu}}' wx:for="{{item.grade}}" wx:for-index='index'
+                                wx:for-item="items"
+                                src="{{item.xiaoshuz==index?'../../../assets/img/s11.png':'../../../assets/img/s1.png'}}">
+                            </image>
+                            <image wx:if='{{!item.xiaoshu}}' wx:for-index='index' wx:for-item="items"
+                                wx:for="{{item.grade}}" src="../../../assets/img/s1.png"></image>
+                            <image wx:for="{{(item.xiaoshu?4:5) - item.grade}}" src="../../../assets/img/s2.png">
+                            </image>
+                        </div>
+                    </view>
+                    <view class="scroll_top_right_r">
+                        <p><span>{{item.grade}}</span>分</p>
+                    </view>
+                </view>
+            </view>
+            <view wx:for="{{item.content}}" wx:for-item="items" class="scroll_ms">
+                {{items.key}}<span>{{items.value}}</span>
+            </view>
+            <view class="time">
+                <p>报名时间：{{item.updated_at}}</p>
+                <p>评价时间：{{item.updated_at}}</p>
+            </view>
+        </view>
+    </view>
+    
+</view>
+
+

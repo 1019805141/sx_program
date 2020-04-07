@@ -1,0 +1,93 @@
+<!--全部课程-->
+<view class="container2">
+    <view class="search">
+        <image src="../../../assets/img/index_search.png"></image>
+        <input type="text" placeholder="在此进行搜索..." value="{{searchValue}}" bindinput="bindKeyInput" bindconfirm="bindconfirm" focus='{{inputShowed}}'
+            placeholder-style="color:#909090" />
+        <view style="{{inputStyle}}" bindtap="searchClose">
+            <image src="../../../assets/img/close.png"></image>
+        </view>
+    </view>
+  <view class="page" style="{{pageHeight}}">
+    <view class="nav">
+        <view class="nav-son {{shownavindex == 0? 'active' : ''}}" bindtap="searchAll" data-nav="0">
+            <view class="content">综合排序</view>
+        </view>
+        <view class="nav-son {{shownavindex == 4? 'active' : ''}}" bindtap="searchDistance" data-nav="4">
+            <view class="content">距离排序</view>
+        </view>
+        <view class="nav-son {{shownavindex == 1? 'active' : ''}}" bindtap="listqy" data-nav="1">
+            <view class="content">区域</view>
+            <view class="icon"></view>
+        </view>
+
+        <view class="nav-son {{shownavindex == 3? 'active' : ''}}" bindtap="listpx" data-nav="3">
+            <view class="content">类别</view>
+            <view class="icon"></view>
+        </view>
+    </view>
+        <!-- 区域筛选 -->
+        <view class="quyu {{qyopen ? 'slidown' : 'slidup'}} {{qyshow ? 'disappear':''}}">
+            <view class="quyulist">
+                <view class="quyulist_left">
+                <view wx:for="{{qiyulist}}" class="{{selectedquyu==index?'hidden2':'show2'}} quyuleftlist" data-index='{{index}}' data-code="{{item.code}}" bindtap="selectedquyu">{{item.name}}</view>
+                </view>
+                <view class="quyulist_right">
+                        <view class="quyulist_right_all quyulist_right_active" bindtap="searchqyAll">全部</view>
+                        <view wx:for="{{quList}}" data-code="{{item.code}}" data-index='{{index}}' bindtap="selectSearch">{{item.name}}</view>
+                </view>
+            </view>
+            
+        </view>
+
+
+        <!-- 排序筛选 -->
+        <view class="temp temp2 contentCenter {{pxopen ? 'slidown' : 'slidup'}} {{pxshow ? 'disappear':''}}">
+            <view wx:for="{{iconList}}" bindtap='selectPX' data-index="{{index}}" data-id="{{item.id}}"
+                class="pxTable {{pxIndex == index?'current4':''}}">
+                {{item.name}}
+            </view>
+        </view>
+        <view class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>
+    </view>
+
+   
+    <view class="mar">
+      <view class="zanwu" style="{{institutionList.length>0?'display:none':'display:block'}}">
+        <image src="../../../assets/img/zanwu2.png"></image>
+        <view>没有与关键词相匹配的结果</view>
+        <view>换个关键词试试</view>
+    </view>
+      <view class="index_jigou" wx:for='{{institutionList}}' style="{{institutionList.length>0?'display:block':'display:none'}}">
+        <view class="index_jigou_top">
+            <image wx:if="{{item.logo == null || item.logo == ''}}" src="../../../assets/img/zanwulist.png" bindtap="goInstitutionDetail" data-id="{{item.id}}"></image>
+            <image wx:else src="{{ipUrl + item.logo}}" bindtap="goInstitutionDetail" data-id="{{item.id}}"></image>
+            <view class="index_jigou_text"  bindtap="goInstitutionDetail" data-id="{{item.id}}">
+                <p>{{item.name}}</p>
+                <view>{{item.description}}</view>
+                <view style="overflow: hidden;">
+                    <div wx:for="{{item.categories}}" wx:for-item="items" wx:for-index='index'>{{items.name}}</div>
+                </view>
+                <span class="index_jigou_star" wx:if="{{item.appraise.length>0}}">
+                <image wx:if='{{item.appraise[0].xiaoshu}}' wx:for="{{item.appraise[0].aggregate}}" wx:for-index='index' wx:for-item="items" src="{{item.appraise[0].xiaoshuz==index?'../../../assets/img/s11.png':'../../../assets/img/s1.png'}}">
+                </image>
+                <image wx:if='{{!item.appraise[0].xiaoshu}}' wx:for-index='index' wx:for-item="items" wx:for="{{item.appraise[0].aggregate}}" src="../../../assets/img/s1.png"></image>
+                <image wx:for="{{(item.appraise[0].xiaoshu?4:5) - item.appraise[0].aggregate}}" src="../../../assets/img/s2.png"></image>
+                    <p>{{item.appraise[0].appraise_count}}条真实评价</p>
+                </span>
+            </view>
+            <view class="index_jigou_right" bindtap="goTel" data-tel="{{item.tel}}" data-id="{{item.id}}">
+                <image src="../../../assets/img/index_tel.png"></image>
+                <view>{{item.call_count}}人</view>
+            </view>
+        </view>
+        <view class="index_jigou_bottom">
+            <image src="../../../assets/img/index_dw2.png"></image>
+            <p>{{item.address}}</p>
+            <p>距您<span>{{item.location}}</span>km</p>
+        </view>
+    </view>
+      
+    </view>
+</view>
+<view class="bottom_footer" style="{{bottomStyle}}">已经到底啦~</view>

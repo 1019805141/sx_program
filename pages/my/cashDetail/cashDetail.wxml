@@ -1,0 +1,22 @@
+<!--代金券-->
+<view class="bg">
+    <image class="bgimg" src="../../../assets/img/bg.png"></image>
+</view>
+<view class="container2">
+    <view class="box_top">
+        <image src="{{ipUrl+content.institution.logo}}"></image>
+        <view class="box_top_text">
+            <p>{{content.main_title}}</p>
+            <span>{{content.title}}</span>
+        </view>
+    </view>
+    <view class="text">
+       {{content.field}}
+    </view>
+    <view class="miaoshu">
+        <p>有效期：{{content.start_time}}至{{content.end_time}}</p>
+        <p>校区地址：{{content.address}}</p>
+        <p>联系方式：{{content.institution.tel}}</p>
+        <p>参与方式：点击立即领取，凭平台通知，到店支付即 可参与活动，活动最终解释权归该机构所有。</p>
+    </view>
+</view> 

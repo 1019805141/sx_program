@@ -1,0 +1,118 @@
+/* pages/index/institutions/institutions.wxss */
+.index_jigou{
+    border: 1px solid #e6e6e6;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 16rpx;
+  }
+  .index_jigou_top>image{
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 50%;
+    float: left;
+    margin-top: 30rpx;
+  }
+  .index_jigou_text{
+    float: left;
+    width: 60%;
+    margin-left: 4%;
+  }
+  .index_jigou_text>p{
+    font-weight: bold;
+    font-size: 32rpx;
+    margin-bottom: 14rpx;
+    color: #333333;
+    display: block;
+  }
+  .index_jigou_text>view{
+    color: #808080;
+    white-space:nowrap;
+  text-overflow:ellipsis;
+  -webkit-text-overflow:ellipsis;
+  overflow:hidden;
+  font-size: 28rpx;
+  margin-bottom: 14rpx;
+  }
+  .index_jigou_top{
+    overflow: hidden;
+    padding: 25rpx;
+  }
+  .index_jigou_text div:nth-child(odd){
+    background: #55C1FF;
+    color: #ffffff;
+    padding: 4rpx 8rpx;
+    border-radius: 8rpx;
+    margin-right: 10rpx;
+    font-size: 26rpx;
+  }
+  .index_jigou_text div:nth-child(even){
+    background: #FF7555;
+    color: #ffffff;
+    padding: 4rpx 8rpx;
+    border-radius: 8rpx;
+    margin-right: 10rpx;
+    font-size: 26rpx;
+  }
+  .index_jigou_star{
+    clear: both;
+    display: block;
+  }
+  .index_jigou_star>image{
+    width: 24rpx;
+    height: 23rpx;
+    float: left;
+    margin-right: 6rpx;
+    margin-top: 4rpx;
+  }
+  .index_jigou_star>p{
+    color: #808080;
+    font-size: 24rpx;
+    float: left;
+  }
+  .index_jigou_right{
+    float: right;
+    width: 110rpx;
+    height: 90rpx;
+    background: #0da6ff;
+    border-radius:40px 0 0 40px;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    text-align: center;
+  }
+  .index_jigou_right>image{
+    width: 38rpx;
+    height: 38rpx;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10rpx;
+  }
+  .index_jigou_right>view{
+    color: #ffffff;
+    font-size: 28rpx;
+  }
+  .index_jigou_bottom{
+    padding: 15rpx 25rpx;
+    clear: both;
+    border-top: 1px solid #e6e6e6;
+    overflow: hidden;
+  }
+  .index_jigou_bottom>image{
+    width: 19rpx;
+    height: 29rpx;
+    margin-right: 20rpx;
+    float: left;
+    margin-top: 6rpx;
+  }
+  .index_jigou_bottom>p{
+    float: left;
+    color: #808080;
+    font-size: 26rpx;
+    margin-right: 20rpx;
+  }
+  .index_jigou_bottom>p>span{
+    color: #FF3B0D;
+  }
+  .mar{
+      margin-top: 30rpx;
+  }

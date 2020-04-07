@@ -1,0 +1,26 @@
+<!--pages/my/userInfo/userInfo.wxml-->
+<view class="container2">
+    <view class="box">
+        <image src="{{content.avatar}}"></image>
+        <view class="box_group">
+            <view class="box_list">
+                <p>姓名</p>
+                <span>{{content.nickname}}</span>
+            </view>
+            <view class="box_list">
+                <p>联系方式</p>
+                <span>{{content.tel == null?'还未绑定手机号':content.tel}}</span>
+            </view>
+            <view class="box_list">
+                <p>所在城市</p>
+                <span>{{content.province_name}}{{content.city_name}}{{content.district_name}}</span>
+            </view>
+            <view class="box_list">
+                <p>详细地址</p>
+                <span>{{content.address == null?'还未填写详细信息':content.address}}</span>
+            </view>
+            <view class="btn" bindtap="goUpdateUser">修改个人信息</view>
+        </view>
+
+    </view>
+</view>

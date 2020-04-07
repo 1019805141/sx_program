@@ -1,0 +1,75 @@
+/* pages/family/more/more.wxss */
+.title{
+    color: #1E508D;
+    border: 1px solid #eff3f7;
+    padding: 20rpx;
+    overflow: hidden;
+    border-radius: 14rpx;
+    margin-top: 24rpx;
+    margin-bottom: 24rpx;
+}
+.title>image{
+    float: left;
+    width: 200rpx;
+    height: 190rpx;
+    border-radius: 14rpx;
+    margin-right: 20rpx;
+}
+.title>view{
+    color: #565656;
+    float: left;
+    width: 66%;
+    line-height: 44rpx;
+    font-size: 28rpx;
+}
+
+.list {
+    padding: 14rpx 30rpx;
+    border: 1px solid #E6E6E6;
+    overflow: hidden;
+    margin-bottom: 20rpx;
+}
+
+.list>image {
+    width: 130rpx;
+    height: 130rpx;
+    float: left;
+    margin-right: 20rpx;
+}
+
+.list_text>view {
+    font-size: 32rpx;
+    color: #262626;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 20rpx;
+    margin-top: 10rpx;
+}
+
+.list_text>p {
+    color: #808080;
+    float: left;
+    margin-right: 20rpx;
+    font-size: 26rpx;
+}
+
+.list_text>p>image {
+    width: 22rpx;
+    height: 22rpx;
+    margin-right: 10rpx;
+}
+.zanwu{
+    overflow: hidden;
+    margin: 0rpx 0 30rpx 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 200rpx;
+}
+.zanwu>view{
+    display: block;
+    margin-top: 10rpx;
+    color: #666666;
+}

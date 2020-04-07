@@ -1,0 +1,9 @@
+<!--pages/index/courseDetails/success/success.wxml-->
+<image class="img" src="../../../../assets/img/success.png"></image>
+<view class="text">恭喜您，预约成功！</view>
+<view class="container2">
+  <view class="mar">
+  <view bindtap="goY">继续约课</view>
+  <view>查看详情</view>
+</view>
+</view>

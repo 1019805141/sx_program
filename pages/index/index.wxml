@@ -1,0 +1,230 @@
+<!--index.wxml-->
+<view class="index_dw">
+  <view class="container2">
+    <view class="index_top">
+      <view class="index_top_left">
+        <image src="../../assets/img/index_dw.png"></image>
+        <view bindtap="position">{{weizhi}}</view>
+        <image src="../../assets/img/index_jiantou.png"></image>
+      </view>
+      <view class="index_top_right">
+        <input type="text" value="{{searchValue}}" bindinput="bindKeyInput" bindconfirm="bindconfirm"
+          focus='{{inputShowed}}' placeholder="机构/课程名称" />
+        <view class="index_top_right_icon" bindtap="goSearch">
+          <image src="../../assets/img/index_search.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="container2">
+  <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="4000">
+    <block wx:for="{{noticeList}}">
+      <swiper-item>
+        <navigator class="swiper_item" open-type="navigate" hover-class="none">
+          <p>【最新报名】</p>
+          <text class="notice_text">{{item.title}}</text>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="container2">
+  <view class="index_icongroup">
+    <view class="index_iconbox" wx:for="{{iconList}}" bindtap="goIcon" data-id="{{item.id}}">
+      <image src="{{ipUrl + item.icon}}"></image>
+      <view>{{item.name}}</view>
+    </view>
+
+    <view class="index_iconbox" bindtap="goIcon" data-id="">
+      <image src="../../assets/img/index_icon10.png"></image>
+      <view>全部课程</view>
+    </view>
+  </view>
+  <view class="index_tongji">
+    <image src="../../assets/img/index_tongji.png"></image>
+    <p>最新统计</p>
+    <view>{{chat.institution_count}}个机构</view>
+    <view>{{chat.course_count}}个课程</view>
+    <view>{{chat.member_count}}位学员</view>
+  </view>
+  <!-- 广告位 -->
+  <view class="index_gg" bindtap="goCoupon">
+    <image src="../../assets/img/index_gg.png"></image>
+  </view>
+  <!-- 真实评价 -->
+  <view class="index_zspj">
+    <view class="index_zspj_title">真实评价</view>
+    <view class="index_zspj_text">
+      <view class="index_zspj_text_top">
+        <p style="color:#0da6ff;font-weight: bold;">{{pingjia.content[0].key}}</p>
+        <view>{{pingjia.content[0].value}}</view>
+      </view>
+      <view class="index_zspj_text_bottom">
+        <view>{{pingjia.name}}评价{{pingjia.institution.name}}</view>
+        <p>第<span>{{pingjia.count}}</span>条真实</p>
+      </view>
+    </view>
+    <image bindtap="goPingjia" src="../../assets/img/index_pj_jiantou.png" class="index_zspj_right"></image>
+  </view>
+</view>
+<view class="jiange"></view>
+<!-- 限时抢课 -->
+<view class="container2">
+  <view class="index_title">
+    <view class="index_title_left">
+      <p>限时抢课</p>
+      <image src="../../assets/img/index_yuan1.png"></image>
+    </view>
+    <view class="index_title_right" bindtap="goRobbing">更多></view>
+  </view>
+
+  <view  wx:if="{{iList.length>0 || eList.length>0}}">
+    <view wx:for="{{iList}}">
+      <view class="index_qiangke" bindtap="goIdetail" data-id="{{item.id}}">
+        <image wx:if="{{item.institution.logo == null || item.institution.logo == ''}}"
+          src="../../assets/img/zanwulist.png"></image>
+        <image wx:else src="{{ipUrl+item.institution.logo}}"></image>
+        <view class="index_qiangke_left">
+          <view>{{item.name}}</view>
+          <p>{{item.institution.name}}</p>
+        </view>
+        <view class="index_qiangke_right">
+          <view>{{item.price}}元</view>
+          <p>
+            <image src="../../assets/img/index_dw2.png"></image>{{item.institution.location}}km
+          </p>
+        </view>
+      </view>
+    </view>
+    <view wx:for="{{eList}}">
+      <view class="index_qiangke" bindtap="goEdetail" data-id="{{item.id}}">
+        <image wx:if="{{item.image == null || item.image == ''}}" src="../../assets/img/zanwulist.png"></image>
+        <image wx:else src="{{ipUrl+item.image}}"></image>
+        <view class="index_qiangke_left">
+          <view>{{item.name}}</view>
+          <i>
+            <p wx:for="{{item.educourses}}" wx:if="{{index<3}}" wx:key="index" wx:for-item="newitem">
+              {{newitem.categories[0].name}}</p>
+          </i>
+        </view>
+        <view class="index_qiangke_right">
+          <!-- <view>{{item.price == null?'0':item.price}}元</view> -->
+          <view>398元</view>
+          <p>
+            <image src="../../assets/img/index_dw2.png"></image>59km
+          </p>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:else>
+    <view class="zanwu">
+      <image src="../../assets/img/zanwuimg.png"></image>
+      <view>该区域暂无限时抢课</view>
+    </view>
+  </view>
+
+
+
+</view>
+<view class="jiange"></view>
+<view class="container2">
+  <view class="index_dwss">
+    <view class="index_dwss_left">
+      <image src="../../assets/img/index_dw2.png"></image>
+      <view>定位：{{dingwei}}</view>
+    </view>
+    <view class="index_dwss_right" bindtap="goMap">切换位置 ></view>
+  </view>
+  <view>
+    <scroll-view scroll-x class="scroll-x weili">
+      <view wx:for="{{leixingList}}" wx:key="{{index}}" class="view-parent2">
+        <view bindtap='dianjis' data-index='{{index}}' data-label="{{item.id}}" data-value="{{item.value}}"
+          class="view-item {{index==currentIndexs?'acrivws':''}}">
+          {{item.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<view class="jiange"></view>
+<view class="container2">
+  <view class="index_title">
+    <view class="index_title_left">
+      <p>附近机构</p>
+      <image src="../../assets/img/index_yuan2.png"></image>
+    </view>
+    <view class="index_title_right" bindtap="goFujin">更多></view>
+  </view>
+  <view wx:for="{{orgList}}">
+    <view class="index_jigou">
+      <view class="index_jigou_top">
+        <image wx:if="{{item.logo == null || item.logo == ''}}" src="../../assets/img/zanwulist.png"></image>
+        <image wx:else src="{{ipUrl+item.logo}}"></image>
+        <view class="index_jigou_text" bindtap="goInstitutionDetail" data-id="{{item.id}}">
+          <p>{{item.name}}</p>
+          <view>{{item.description}}</view>
+          <view style="overflow: hidden; float:left" wx:for="{{item.categories}}" wx:key="index" wx:for-item="newitem">
+            <div>{{newitem.name}}</div>
+          </view>
+          <span class="index_jigou_star index_jigou_star1" wx:if="{{item.appraise.length>0}}">
+            <image wx:if='{{item.appraise[0].xiaoshu}}' wx:for="{{item.appraise[0].aggregate}}" wx:for-index='index'
+              wx:for-item="items"
+              src="{{item.appraise[0].xiaoshuz==index?'../../assets/img/s11.png':'../../assets/img/s1.png'}}">
+            </image>
+            <image wx:if='{{!item.appraise[0].xiaoshu}}' wx:for-index='index' wx:for-item="items"
+              wx:for="{{item.appraise[0].aggregate}}" src="../../assets/img/s1.png"></image>
+            <image wx:for="{{(item.appraise[0].xiaoshu?4:5) - item.appraise[0].aggregate}}"
+              src="../../assets/img/s2.png"></image>
+            <p>{{item.appraise[0].appraise_count}}条真实评价</p>
+          </span>
+        </view>
+        <view class="index_jigou_right" bindtap="goTel" data-tel="{{item.tel}}" data-id="{{item.id}}">
+          <image src="../../assets/img/index_tel.png"></image>
+          <view>{{item.call_count}}人</view>
+        </view>
+      </view>
+      <view class="index_jigou_bottom">
+        <image src="../../assets/img/index_dw2.png"></image>
+        <p>{{item.address}}</p>
+        <p>距您<span>{{item.location}}</span>km</p>
+      </view>
+    </view>
+  </view>
+
+
+
+</view>
+<view class="jiange"></view>
+
+<view class="animation-element-wrapper" animation="{{animation}}" style="visibility:{{show ? 'visible':'hidden'}}"
+  bindtap="hiddenFloatView" data-id="444">
+  <view class="animation-element" catchtap="nono">
+    <text class="left-bt" catchtap="hiddenFloatView" data-id="555">取消</text>
+    <text class="right-bt" catchtap="hiddenFloatView" data-id="666">确定</text>
+    <view class="line"></view>
+
+    <picker-view indicator-style="height: 50rpx;" value="{{value}}" bindchange="bindChange" catchtap="nono">
+      <!--省-->
+      <picker-view-column>
+        <view wx:for="{{provinces}}" wx:for-item="sheng" wx:key="">
+          {{sheng.name}}
+        </view>
+      </picker-view-column>
+      <!--地级市-->
+      <picker-view-column>
+        <view wx:for="{{citys}}" wx:key="">
+          {{item.name}}
+        </view>
+      </picker-view-column>
+      <!--区县-->
+      <picker-view-column>
+        <view wx:for="{{countys}}" wx:key="">
+          {{item.name}}
+        </view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>

@@ -1,0 +1,45 @@
+<!--pages/my/myCommentDe/myCommentDe.wxml-->
+<view class="container2">
+    <view class="kecheng">
+        <i></i>
+        <view>99元限量课程</view>
+        <i></i>
+    </view>
+
+    <view class="box" >
+        <view class="box_top">
+            <image src="{{ipUrl + list.institution.logo}}"></image>
+            <view class="box_top_text">
+                <view>{{list.institution_course.name}}</view>
+                <p>{{list.institution_course.description}}</p>
+                <p>{{list.institution.name}}</p>
+            </view>
+
+        </view>
+    </view>
+    <view class="pingfen">
+        <view class="pingfen_title">整体评价</view>
+        <view class="star">
+            <image wx:if='{{list.xiaoshu}}' wx:for="{{list.grade}}" wx:for-index='index' wx:for-item="items" src="{{list.xiaoshuz==index?'../../../assets/img/s11.png':'../../../assets/img/s1.png'}}">
+            </image>
+            <image wx:if='{{!list.xiaoshu}}' wx:for-index='index' wx:for-item="items" wx:for="{{list.grade}}" src="../../../assets/img/s1.png"></image>
+            <image wx:for="{{(list.xiaoshu?4:5) - list.grade}}" src="../../../assets/img/s2.png"></image>
+        </view>
+        <view class="pingfen_fen">{{list.grade}}分</view>
+    </view>
+
+</view>
+<view class="pingjia">
+    <view class="container2">
+        <view wx:for="{{list.content}}">
+            <p>{{item.key}}</p>{{item.value}}
+        </view>
+    </view>
+
+</view>
+<view class="container2">
+    <view class="img_group">
+        <image wx:for='{{list.images}}' src="{{'https://tongxueyueke.com' + item}}"></image>
+    </view>
+    <view class="time">评价时间：{{list.created_at}}</view>
+</view>

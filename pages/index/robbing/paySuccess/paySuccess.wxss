@@ -1,0 +1,37 @@
+/* pages/index/robbing/paySuccess/paySuccess.wxss */
+.img{
+    width: 244rpx;
+    height: 210rpx;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30rpx;
+    margin-top: 130rpx;
+}
+.te{
+    text-align: center;
+    color: #333333;
+    font-size: 36rpx;
+}
+.btn{
+    margin-top: 150rpx;
+}
+.btn>view:first-child{
+    background: #0DA6FF;
+    color: #ffffff;
+    text-align: center;
+    line-height: 80rpx;
+    height: 80rpx;
+    border-radius: 8rpx;
+    float: left;
+    width: 48%;
+}
+.btn>view:last-child{
+    border: 1px solid #909090;
+    color: #909090;
+    text-align: center;
+    line-height: 80rpx;
+    height: 80rpx;
+    border-radius: 8rpx;
+    float: right;
+    width: 48%;
+}

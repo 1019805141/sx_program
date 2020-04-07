@@ -1,0 +1,228 @@
+<!--pages/org/org.wxml-->
+<view class="container2">
+    <view class="top">
+        <view class="top_dw">
+            <image src="{{ipUrl+detail.logo}}"></image>
+            <view class="top_dw_right">
+                <p>{{detail.name}}</p>
+                <span>{{detail.description}}</span>
+                <view class="stat">
+                    <image wx:if='{{detail.appraise[0].xiaoshu}}' wx:for="{{detail.appraise[0].aggregate}}"
+                        wx:for-index='index'
+                        src="{{detail.appraise[0].xiaoshuz==index?'../../assets/img/s11.png':'../../assets/img/s1.png'}}">
+                    </image>
+                    <image wx:if='{{!detail.appraise[0].xiaoshu}}' wx:for-index='index'
+                        wx:for="{{detail.appraise[0].aggregate}}"
+                        src="{{detail.appraise[0].xiaoshuz==index?'../../assets/img/s11.png':'../../assets/img/s1.png'}}">
+                    </image>
+                    <image wx:for="{{(detail.appraise[0].xiaoshu?4:5) - detail.appraise[0].aggregate}}" src="../../assets/img/s2.png"></image>
+                    <view>{{detail.appraise[0].appraise_count}}条真实评价</view>
+                </view>
+            </view>
+        </view>
+        <image src="../../assets/img/ke_bg.png"></image>
+    </view>
+
+</view>
+<view class="tab">
+    <view class="active">首页
+        <view class="line"></view>
+    </view>
+    <view bindtap="goTeacher">师资</view>
+    <view bindtap="goCourses">课程</view>
+    <view bindtap="goDemeanor">风采</view>
+    <view bindtap="goAppraises">评价</view>
+</view>
+<view class="jiange"></view>
+<view class="container2">
+    <view class="jianjie">
+        <p>{{detail.name}}简介</p>
+        <view>
+            <rich-text nodes="{{detail.summary}}"></rich-text>
+        </view>
+    </view>
+</view>
+<view class="jiange"></view>
+<view class="container2">
+    <view class="biaoqian">
+        <p>标签</p>
+        <view wx:for="{{detail.categories}}">{{item.name}}</view>
+    </view>
+    <view class="rexian">
+        <p>咨询热线</p>
+        <span>一键拨号，本机构老师接听</span>
+        <view bindtap="clickTel" data-tel="{{detail.tel}}" data-id="{{detail.id}}">
+            <image src="../../assets/img/tel1.png"></image>
+            立即拨打
+        </view>
+    </view>
+    <view class="dizhi">
+        <p>机构地址</p>
+        <span>济南市槐荫区腊山河西路</span>
+        <view>
+            <image src="../../assets/img/index_dw2.png"></image>
+            <view><i>{{detail.location}}</i>km</view>
+        </view>
+    </view>
+</view>
+<view class="jiange"></view>
+<view class="container2">
+    <view class="title">
+        <i></i>
+        <p>机构课程</p>
+        <span bindtap="goCourses">更多 >></span>
+    </view>
+
+    <view class="zanwu" style="{{coursesList.length>0?'display:none':'display:block'}}">
+        <image src="../../assets/img/zanwuimg.png"></image>
+        <p>暂无机构课程</p>
+    </view>
+
+    <view class="kclist" wx:for="{{coursesList}}" style="{{coursesList.length>0?'display:block':'display:none'}}">
+        <image wx:if="{{item.image == null || item.image == ''}}" src="../../assets/img/zanwulist.png" data-id="{{item.id}}" bindtap="goCousers"></image>
+        <image wx:else src="{{ipUrl+ item.image[0]}}" data-id="{{item.id}}" bindtap="goCousers"></image>
+        <view class="kclist_text" data-id="{{item.id}}" bindtap="goCousers">
+            <view>{{item.name}}</view>
+            <p>{{item.institution.name}}</p>
+        </view>
+        <view class="kclist_right">
+            <view class="kclist_right_btn" bindtap="goBm" data-id="{{item.id}}" data-institution_id="{{item.institution_id}}">预约试听</view>
+            <view class="kclist_right_dw">
+                <image src="../../assets/img/index_dw2.png"></image>
+                <p><span>{{item.institution.location}}</span>km</p>
+            </view>
+        </view>
+    </view>
+
+</view>
+<view class="jiange"></view>
+<view class="container2">
+    <view class="title">
+        <i></i>
+        <p>机构评价</p>
+        <span bindtap="goAppraises">更多 >></span>
+    </view>
+
+    <view class="zanwu" style="{{appraisesList.length>0?'display:none':'display:block'}}">
+        <image src="../../assets/img/zanwuimg.png"></image>
+        <p>暂无机构评价</p>
+    </view>
+
+
+    <view class="pllist" style="{{appraisesList.length>0?'display:block':'display:none'}}">
+        <view class="section section_gap">
+            <scroll-view class="scroll-view_H" scroll-x="true">
+                <view class="scroll-view-item_H" wx:for="{{appraisesList}}">
+                    <view class="scroll_top">
+                        <image src="{{item.user.avatar}}"></image>
+                        <view class="scroll_top_right">
+                            <view class="scroll_top_right_l">
+                                <view>{{item.user.nickname}}</view>
+                                <div>
+                                    <image wx:if='{{item.xiaoshu}}' wx:for="{{item.grade}}" wx:for-index='index'
+                                        wx:for-item="items"
+                                        src="{{item.xiaoshuz==index?'../../assets/img/s11.png':'../../assets/img/s1.png'}}">
+                                    </image>
+                                    <image wx:if='{{!item.xiaoshu}}' wx:for-index='index' wx:for-item="items"
+                                        wx:for="{{item.grade}}" src="../../assets/img/s1.png"></image>
+                                    <image wx:for="{{(item.xiaoshu?4:5) - item.grade}}" src="../../assets/img/s2.png">
+                                    </image>
+                                </div>
+                            </view>
+                            <view class="scroll_top_right_r">
+                                <p><span>{{item.grade}}</span>分</p>
+                            </view>
+                        </view>
+                    </view>
+                    <view wx:for="{{item.content}}" wx:for-item="items" class="scroll_ms">
+                        {{items.key}}<span>{{items.value}}</span>
+                    </view>
+                </view>
+
+            </scroll-view>
+        </view>
+    </view>
+</view>
+<view class="jiange"></view>
+<view class="container2">
+    <view class="title">
+        <i></i>
+        <p>机构风采</p>
+        <span bindtap="goDemeanor">更多 >></span>
+    </view>
+
+    <view class="zanwu" style="{{picturesList.length>0?'display:none':'display:block'}}">
+        <image src="../../assets/img/zanwuimg.png"></image>
+        <p>暂无机构风采</p>
+    </view>
+    
+    <view wx:for="{{picturesList}}" class="jgfc" style="{{picturesList.length>0?'display:block':'display:none'}}">
+        <image wx:for="{{item.pictures}}" wx:for-item="items" wx:for-index='index' src='{{ipUrl + items}}'></image>
+    </view>
+</view>
+<view class="jiange"></view>
+<view class="container2">
+    <view class="title">
+        <i></i>
+        <p>师资</p>
+        <span bindtap="goTeacher">更多 >></span>
+    </view>
+    <view class="zanwu" style="{{teacherList.length>0?'display:none':'display:block'}}">
+        <image src="../../assets/img/zanwuimg.png"></image>
+        <p>暂无师资信息</p>
+    </view>
+    <view class="teacher" wx:for="{{teacherList}}" style="{{teacherList.length>0?'display:block':'display:none'}}">
+        <image wx:if="{{item.image == null || item.image == ''}}" src="../../assets/img/zanwulist.png"></image>
+        <image wx:else src="{{ipUrl + item.image}}"></image>
+        <view class="teacher_right">
+            <view>{{item.name}}</view>
+            <p>主授课程：{{item.course}}</p>
+        </view>
+        <view class="teacher_dianji">点击查看</view>
+    </view>
+</view>
+<view class="jiange"></view>
+<view class="container2">
+    <view class="title">
+        <i></i>
+        <p>小伙伴们都看了</p>
+        <span>更多 >></span>
+    </view>
+
+    <view class="zanwu" style="{{institutionList.length>0?'display:none':'display:block'}}">
+        <image src="../../assets/img/zanwuimg.png"></image>
+        <p>暂无其他机构信息</p>
+    </view>
+
+    <view class="index_jigou" wx:for='{{institutionList}}' style="{{institutionList.length>0?'display:block':'display:none'}}">
+        <view class="index_jigou_top">
+            <image wx:if="{{item.logo == null || item.logo == ''}}" src="../../assets/img/zanwulist.png"></image>
+            <image wx:else src="{{ipUrl + item.logo}}"></image>
+            <view class="index_jigou_text" bindtap="goqt" data-id="{{item.id}}">
+                <p>{{item.name}}</p>
+                <view>{{item.description}}</view>
+                <view style="overflow: hidden;">
+                    <div wx:for="{{item.categories}}" wx:for-item="items" wx:for-index='index'>{{items.name}}</div>
+                </view>
+                <span class="index_jigou_star" wx:if="{{item.appraise.length>0}}">
+                <image wx:if='{{item.appraise[0].xiaoshu}}' wx:for="{{item.appraise[0].aggregate}}" wx:for-index='index' wx:for-item="items" src="{{item.appraise[0].xiaoshuz==index?'../../assets/img/s11.png':'../../assets/img/s1.png'}}">
+                </image>
+                <image wx:if='{{!item.appraise[0].xiaoshu}}' wx:for-index='index' wx:for-item="items" wx:for="{{item.appraise[0].aggregate}}" src="../../assets/img/s1.png"></image>
+                <image wx:for="{{(item.appraise[0].xiaoshu?4:5) - item.appraise[0].aggregate}}" src="../../assets/img/s2.png"></image>
+
+                    <p>{{item.appraise[0].appraise_count}}条真实评价</p>
+                </span>
+            </view>
+            <view class="index_jigou_right" bindtap="goTel" data-tel="{{item.tel}}" data-id="{{item.id}}">
+                <image src="../../assets/img/index_tel.png"></image>
+                <view>{{item.call_count}}人</view>
+            </view>
+        </view>
+        <view class="index_jigou_bottom">
+            <image src="../../assets/img/index_dw2.png"></image>
+            <p>{{item.address}}</p>
+            <p>距您<span>{{item.location}}</span>km</p>
+        </view>
+    </view>
+
+</view>

@@ -1,0 +1,59 @@
+<!--pages/my/updateUser/updateUser.wxml-->
+    <view class="container2">
+        <view class="box">
+            <image src="{{img}}"></image>
+            <view class="box_group">
+                <view class="box_list">
+                    <p>姓名</p>
+                    <input type="text" value="{{nickname}}"  bindinput="forName"/>
+                </view>
+                <view class="box_list">
+                    <p>联系方式</p>
+                    <input type="number" value="{{tel}}" bindinput="forTel"/>
+                </view>
+                <view class="box_list">
+                    <input type="number" placeholder="请输入验证码" bindinput="forCode" placeholder-style="color:#ffffff" />
+                    <button bindtap="sendCode" disabled="{{smsFlag}}" style='color:{{sendColor}}'>{{sendTime}}</button>
+                </view>
+                <view class="box_list">
+                    <p>所在城市</p>
+                    <view class="xuanze" bindtap="translate">{{select}}</view>
+                </view>
+                <view class="box_list">
+                    <p>详细地址</p>
+                    <input type="number" value="{{address}}" bindinput="forAddress"/>
+                </view>
+                <view class="btn" bindtap="submit">提 交</view>
+            </view>
+
+        </view>
+    </view>
+      
+  <view class="animation-element-wrapper" animation="{{animation}}" style="visibility:{{show ? 'visible':'hidden'}}" bindtap="hiddenFloatView" data-id="444">
+     <view class="animation-element" catchtap="nono">
+        <text class="left-bt" catchtap="hiddenFloatView" data-id="555">取消</text>
+        <text class="right-bt" catchtap="hiddenFloatView" data-id="666">确定</text>
+          <view class="line"></view> 
+
+        <picker-view indicator-style = "height: 50rpx;" value="{{value}}" bindchange="bindChange" catchtap="nono">
+        <!--省-->
+        <picker-view-column>
+           <view wx:for="{{provinces}}" wx:for-item="sheng" wx:key="">
+             {{sheng.name}}
+          </view>
+        </picker-view-column>
+        <!--地级市-->
+        <picker-view-column>
+          <view wx:for="{{citys}}" wx:key="">
+            {{item.name}}
+          </view>
+        </picker-view-column>
+        <!--区县-->
+        <picker-view-column>
+          <view wx:for="{{countys}}" wx:key="">
+            {{item.name}}
+          </view>
+        </picker-view-column>
+        </picker-view>
+    </view>
+  </view>

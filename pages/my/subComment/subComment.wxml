@@ -1,0 +1,60 @@
+<!--pages/my/subComment/subComment.wxml-->
+<view class="container2">
+    <view class="box mar">
+        <view class="box_top">
+            <image src="{{ipUrl + list.institution.logo}}"></image>
+            <view class="box_top_text">
+                <view>{{list.name}}</view>
+                <p>{{list.institution.name}}</p>
+            </view>
+        </view>
+    </view>
+    <view class="pingfen">
+        <view class="pingfen_l">整体评价</view>
+        <block wx:for="{{one_2}}" wx:key="index">
+            <image catchtap='in_xin' id='{{index+1}}' data-in='star' src='../../../assets/img/s1.png'></image>
+        </block>
+        <block wx:for="{{two_2}}" wx:key="index">
+            <image catchtap='in_xin' id='{{index+1}}' data-in='starg' src='../../../assets/img/s2.png'></image>
+        </block>
+        <view class="pingfen_num">{{one_2}}分</view>
+    </view>
+
+</view>
+<view class="pingjia">
+    <view class="container2">
+        <view class="pingjia_box">
+            <view>【环境】</view>
+            <input type="text" bindinput="huanjing" placeholder="在此输入环境评价" />
+        </view>
+        <view class="pingjia_box">
+            <view>【交通】</view>
+            <input type="text" bindinput="jiaotong" placeholder="在此输入交通评价" />
+        </view>
+        <view class="pingjia_box">
+            <view>【师资】</view>
+            <input type="text" bindinput="shizi" placeholder="在此输入师资评价" />
+        </view>
+        <view class="pingjia_box">
+            <view>【服务】</view>
+            <input type="text" bindinput="fuwu" placeholder="在此输入服务评价" />
+        </view>
+        <view class="pingjia_box">
+            <view>【效果】</view>
+            <input type="text" bindinput="xiaoguo" placeholder="在此输入效果评价" />
+        </view>
+        <view class="pingjia_box">
+            <view>【选择理由】</view>
+            <input type="text" bindinput="liyou" placeholder="在此输入选择理由" />
+        </view>
+    </view>
+</view>
+<view class="container2">
+    <view class="addList">
+        <image class="add" bindtap="bindChooiceProduct" src="../../../assets/img/addimg.png"></image>
+        <image class="add" wx:for="{{imgList}}" src="{{item}}"></image>
+    </view>
+    <view class="btn_group" bindtap="submit">
+        <view>发 布</view>
+    </view>
+</view>

@@ -1,0 +1,32 @@
+<!--风采-->
+<view class="container2">
+    <view class="tab">
+        <view bindtap="goIndex">首页
+        </view>
+        <view bindtap="goTeacher">师资
+        </view>
+        <view bindtap="goCurriculum">课程</view>
+        <view class="active">风采
+            <view class="line"></view>
+        </view>
+        <view bindtap="goComment">评价</view>
+    </view>
+</view>
+<view class="jiange"></view>
+<view class="container2">
+    <view class="nav_tab">
+        <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected">{{item}}
+        <view class="{{selected==index?'nav_underline':''}}"></view>
+        </view>
+        </view>
+        <view wx:if="{{selected == 0}}">
+            <view class="img" wx:for="{{picturesList}}">
+                <image  wx:for="{{item.pictures}}" wx:for-item="items" wx:for-index='index' src='{{ipUrl + items}}'></image>
+            </view>
+        </view>
+        <view wx:if="{{selected == 1}}">
+            <view class="img" wx:for="{{picturesList}}">
+                <image  wx:for="{{item.pictures}}" wx:for-item="items" wx:for-index='index' src='{{ipUrl + items}}'></image>
+            </view>
+        </view>
+</view>

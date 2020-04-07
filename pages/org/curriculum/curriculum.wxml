@@ -1,0 +1,36 @@
+<!--课程-->
+<view class="container2">
+    <view class="tab">
+        <view bindtap="goIndex">首页
+        </view>
+        <view bindtap="goTeacher">师资</view>
+        <view class="active">课程
+            <view class="line"></view>
+        </view>
+        <view bindtap="goDemeanor">风采</view>
+        <view bindtap="goComment">评价</view>
+    </view>
+</view>
+<view class="jiange"></view>
+<view class="container2 mar">
+<view class="zanwu" style="{{coursesList.length>0?'display:none':'display:block'}}">
+        <image src="../../../assets/img/zanwuimg.png"></image>
+        <view>暂无数据</view>
+    </view>
+    <view class="kclist" wx:for="{{coursesList}}" style="{{coursesList.length>0?'display:block':'display:none'}}">
+        <image wx:if="{{item.image == null || item.image == ''}}" src="../../../assets/img/zanwulist.png" data-id="{{item.id}}" bindtap="goCousers"></image>
+        <image wx:else src="{{ipUrl+ item.image[0]}}" data-id="{{item.id}}" bindtap="goCousers"></image>
+        <view class="kclist_text" bindtap="goCousers" data-id="{{item.id}}">
+            <view>{{item.name}}</view>
+            <p>{{item.institution.name}}</p>
+        </view>
+        <view class="kclist_right">
+            <view class="kclist_right_btn" bindtap="goBm" data-id="{{item.id}}" data-institution_id="{{item.institution_id}}">预约试听</view>
+            <view class="kclist_right_dw">
+                <image src="../../../assets/img/index_dw2.png"></image>
+                <p><span>{{item.institution.location}}</span>km</p>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="bottom_footer" style="{{bottomStyle}}">已经到底啦~</view>

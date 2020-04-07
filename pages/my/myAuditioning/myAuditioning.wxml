@@ -1,0 +1,73 @@
+<!--pages/my/myAuditioning/myAuditioning.wxml-->
+<view class="container2">
+    <view class="nav_tab">
+        <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected">
+            {{item}}
+            <view class="{{selected==index?'nav_underline':''}}"></view>
+        </view>
+    </view>
+    <view wx:if="{{selected == 0}}">
+        <view class="zanwu" style="{{cashList.length>0?'display:none':'display:block'}}">
+            <image src="../../../assets/img/zanwuimg.png"></image>
+            <view>暂无我的预约试听信息</view>
+        </view>
+
+
+        <view class="box" wx:for="{{cashList}}" wx:key="key" style="{{cashList.length>0?'display:block':'display:none'}}" data-id="{{item.id}}" bindtap="goDetail">
+            <view class="box_top">
+                <image src="{{ipUrl +item.institution.logo}}"></image>
+                <view class="box_top_text">
+                    <view>{{item.course.name}}</view>
+                    <p>{{item.institution.name}}</p>
+                </view>
+                <view class="{{item.status==0?'daishiting':'yiwancheng'}}">{{item.status==0?'待试听':'已完成'}}</view>
+            </view>
+            <view class="box_bottom">
+                <image src="../../../assets/img/index_dw2.png"></image>
+                <view>{{item.institution.address}}</view>
+            </view>
+        </view>
+        
+    </view>
+    
+    <view wx:if="{{selected == 1}}">
+        <view class="zanwu" style="{{cashList.length>0?'display:none':'display:block'}}">
+            <image src="../../../assets/img/zanwuimg.png"></image>
+            <view>暂无我的预约试听信息</view>
+        </view>
+        <view class="box" wx:for="{{cashList}}" wx:key="key">
+            <view class="box_top">
+                <image src="{{ipUrl +item.institution.logo}}"></image>
+                <view class="box_top_text">
+                    <view>{{item.course.name}}</view>
+                    <p>{{item.institution.name}}</p>
+                </view>
+                <view class="{{item.status==0?'daishiting':'yiwancheng'}}">{{item.status==0?'待试听':'已完成'}}</view>
+            </view>
+            <view class="box_bottom">
+                <image src="../../../assets/img/index_dw2.png"></image>
+                <view>{{item.institution.address}}</view>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{selected == 2}}">
+        <view class="zanwu" style="{{cashList.length>0?'display:none':'display:block'}}">
+            <image src="../../../assets/img/zanwuimg.png"></image>
+            <view>暂无我的预约试听信息</view>
+        </view>
+        <view class="box" wx:for="{{cashList}}" wx:key="key">
+            <view class="box_top">
+                <image src="{{ipUrl +item.institution.logo}}"></image>
+                <view class="box_top_text">
+                    <view>{{item.course.name}}</view>
+                    <p>{{item.institution.name}}</p>
+                </view>
+                <view class="{{item.status==0?'daishiting':'yiwancheng'}}">{{item.status==0?'待试听':'已完成'}}</view>
+            </view>
+            <view class="box_bottom">
+                <image src="../../../assets/img/index_dw2.png"></image>
+                <view>{{item.institution.address}}</view>
+            </view>
+        </view>
+    </view>
+</view>

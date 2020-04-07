@@ -1,0 +1,169 @@
+/* pages/org/comment/comment.wxss */
+page{
+    background: #f6f6f6;
+}
+.tab {
+    overflow: hidden;
+    padding-bottom: 20rpx;
+    text-align: center;
+    margin-top: 20rpx;
+}
+
+.tab>view {
+    color: #666666;
+    width: 20%;
+    float: left;
+    font-size: 32rpx;
+    padding-bottom: 16rpx;
+}
+
+.tab>.active {
+    color: #0DA6FF;
+    position: relative;
+}
+
+.line {
+    width: 72rpx;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    background: #0DA6FF;
+    left: 26%;
+}
+
+.pinglun_top_left {
+    float: left;
+    width: 30%;
+}
+
+.pinglun_top_left>view {
+    color: #222222;
+    font-size: 28rpx;
+    text-align: center;
+}
+.pinglun_top{
+    margin: 20rpx 0;
+    overflow: hidden;
+}
+.pinglun_top_left>view>span {
+    color: #0DA6FF;
+    font-size: 50rpx;
+    font-weight: bold;
+}
+.pinglun_top_left>p{
+    display: block;
+    text-align: center;
+}
+.pinglun_top_left>p>image{
+    width: 24rpx;
+    height: 24rpx;
+    margin-right: 6rpx;
+    display: inline-block;
+}
+.pinglun_top_right{
+    float: left;
+}
+.pinglun_top_right>view{
+    font-size: 30rpx;
+    color: #222222;
+    margin-bottom: 16rpx;
+}
+.pinglun_top_right>span{
+    font-size: 26rpx;
+    color: #808080;
+    display: block;
+}
+.scroll-view-item_H {
+    width: 93%;
+    margin-right: 15px;
+    display: inline-block;
+    padding: 13px 13px;
+    border: 1px solid #e6ecf2;
+    margin-top: 30rpx;
+}
+.scroll_top_right{
+    overflow: hidden;
+}
+.scroll_top>image{
+    float: left;
+    width: 70rpx;
+    height: 70rpx;
+    margin-right: 20rpx;
+}
+.scroll_top_right{
+    float: left;
+    width: 84%;    
+    overflow: hidden;
+
+}
+.scroll_top_right_l image{
+    width: 24rpx;
+    height: 23rpx;
+}
+.scroll_top_right_l>p{
+    background: #55c1ff;
+    padding: 4rpx 10rpx;
+    color: #ffffff;
+    font-size: 26rpx;
+    display: inline-block;
+    border-radius: 8rpx;
+}
+.scroll_top_right_l>view{
+    display: inline-block;
+    margin-right: 20rpx;
+}
+.scroll_top_right_r{
+    float: right;
+}
+.scroll_top_right_r>p{
+    color: #262626;
+    font-size: 28rpx;
+}
+.scroll_top_right_r>p>span{
+    color: #FF3B0D;
+    font-size: 46rpx;
+}
+.scroll_top_right_l{
+    float: left;
+}
+.scroll_top_right_l>div{
+    display: block;
+}
+.scroll_ms{
+    color: #262626;
+    font-size: 28rpx;
+    margin-bottom: 14rpx;
+    clear: both;
+}
+.scroll_ms>span{
+    color: #666666;
+    padding-left: 20rpx;
+    display: inline-block;
+}
+.scroll_top{
+    margin-bottom: 20rpx;
+    overflow: hidden;
+}
+.time p{
+    font-size: 26rpx;
+    color: #333333;
+    display: block;
+    margin-bottom: 10rpx;
+}
+.zanwu{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 300rpx;
+}
+.zanwu image{
+    width: 362rpx;
+    height: 258rpx;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 70rpx;
+}
+.zanwu view{
+    font-size: 28rpx;
+    color: #4D4D4D;
+}

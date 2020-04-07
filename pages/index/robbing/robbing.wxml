@@ -1,0 +1,40 @@
+<!--限时抢课-->
+<image class="banner" src="../../../assets/img/banner2.png"></image>
+<view class="container2">
+    <view class="title">超级套餐</view>
+    <view class="taocan" wx:for="{{eList}}" data-id="{{item.id}}" bindtap="goEdetail">
+        <image wx:if="{{item.image == null || item.image == ''}}" src="../../../assets/img/zanwulist.png"></image>
+        <image wx:else src="{{ipUrl + item.image}}"></image>
+        <view class="taocan_t">
+            <view>{{item.name}}</view>
+            <span>{{item.price == null?'0':item.price}}元</span>
+            <div class="taocan_biaoqian">
+                <li wx:for="{{item.educourses[0].categories}}" wx:key="index" wx:for-item="newitem">{{newitem.name}}
+                </li>
+            </div>
+            <div class="taocan_dw">
+                <image src="../../../assets/img/index_dw2.png"></image>
+                <p>{{item.educourses[0].institution.location}}km</p>
+            </div>
+        </view>
+    </view>
+    <view class="more"  bindtap="loadEmore" style="{{e_last}}">加载更多<image src="../../../assets/img/index_jiantou1.png"></image>
+    </view>
+    <view class="title">限量课程</view>
+    <view class="taocan" wx:for="{{iList}}" data-id="{{item.id}}" bindtap="goIdetail">
+        <image wx:if="{{item.institution.logo == null || item.institution.logo == ''}}" src="../../../assets/img/zanwulist.png"></image>
+        <image wx:else src="{{ipUrl + item.institution.logo}}"></image>
+        <view class="taocan_t">
+            <view>{{item.name}}</view>
+            <span>{{item.price == null?'0':item.price}}元</span>
+            <div class="taocan_miaoshu">
+                {{item.institution.name}}
+            </div>
+            <div class="taocan_dw">
+                <image src="../../../assets/img/index_dw2.png"></image>
+                <p>{{item.institution.location}}km</p>
+            </div>
+        </view>
+    </view>
+</view>
+<view class="bottom_footer" style="{{bottomStyle}}">已经到底啦~</view>

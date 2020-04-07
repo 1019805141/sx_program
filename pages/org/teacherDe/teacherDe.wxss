@@ -1,0 +1,108 @@
+/* pages/org/teacherDe/teacherDe.wxss */
+.tx_top{
+    position: relative;
+    margin: 30rpx 0;
+}
+.tx_top>image{
+    width: 690rpx;
+    height: 320rpx;
+    margin: 0 auto;
+    display: block;
+}
+.tx_top_text{
+    width: 100%;
+    position: absolute;
+    left: 15%;
+    overflow: hidden;
+    bottom: 0;
+}
+.tx_top_text>image{
+    width: 190rpx;
+    height: 300rpx;
+    float: left;
+}
+.tx_top_text>view{
+    margin-top: 100rpx;
+    float: left;
+    margin-left: 60rpx;
+}
+.tx_top_text>view>p{
+    font-size: 38rpx;
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+}
+.tx_top_text>view>view{
+    color: #ffffff;
+    font-size: 28rpx;
+    margin-top: 15rpx;
+}
+.form{
+    padding-bottom: 30rpx;
+    border-bottom: 1px solid #e1e1e1;
+
+}
+.form>p{
+    color: #222222;
+    font-size: 30rpx;
+    display: inline-block;
+    margin-right: 20rpx;
+}
+.form>span{
+    color: #666666;
+    font-size: 30rpx;
+    display: inline-block;
+}
+.teacher>p{
+    display: block;
+    color: #222222;
+    margin-bottom: 30rpx;
+    font-size: 30rpx;
+    margin-top: 30rpx;
+}
+.teacher_box{
+    border-radius: 12rpx;
+    border: 1px solid #ebebeb;
+    padding: 30rpx;
+    overflow: hidden;
+}
+.teacher_left{
+    float: left;
+    width: 60%;
+    text-align: center;
+}
+.teacher_left>view{
+    color: #0da6ff;
+    font-size: 68rpx;
+    margin-bottom: 20rpx;
+    text-align: center;
+}
+.teacher_left>span{
+    display: inline-block;
+    background: #edebff;
+    color: #0da6ff;
+    padding: 6rpx;
+    margin: 0 auto;
+    text-align: center;
+}
+.teacher_left>p{
+    padding: 20rpx;
+    background: #edebff;
+    display: block;
+    margin-top: 30rpx;
+    text-align: left;
+    border-radius: 10rpx;
+}
+.teacher_left>p>view{
+    color: #646464;
+    font-size: 26rpx;
+}
+.teacher_right{
+    float: right;
+    background: #dcf8ff;
+    padding: 10rpx;
+}
+.teacher_right>image{
+    width: 190rpx;
+    height: 300rpx; 
+}

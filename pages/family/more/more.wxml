@@ -1,0 +1,19 @@
+<!--pages/family/more/more.wxml-->
+<view class="container2">
+    <view class="title">
+        <image wx:if="{{title.image == null || title.image == ''}}" src="../../../assets/img/zanwulist.png"></image>
+        <image wx:else src="{{ipUrl + title.image}}"></image>
+        <view>{{title.title}}</view>
+    </view>
+    <view class="list" wx:for="{{list}}">
+        <image wx:if="{{item.image == null || item.image == ''}}" src="../../../assets/img/zanwulist.png"></image>
+        <image wx:else src="{{ipUrl+item.image}}"></image>
+        <view class="list_text">
+            <view>{{item.title}}</view>
+            <p>{{item.updated_at[0]}}</p>
+            <p><image src="../../../assets/img/time.png"></image>{{item.updated_at[1]}}</p>
+            <p>浏览量：{{item.view_count}}</p>
+        </view>
+    </view>
+</view>
+<view class="bottom_footer" style="{{bottomStyle}}">已经到底啦~</view>
